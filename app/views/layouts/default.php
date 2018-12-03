@@ -136,9 +136,8 @@
                     1
                     1
                 </pre>
-
-        <footer id="footer">
-            
+        
+        <footer id="footer">   
         </footer>
     </div>
 
