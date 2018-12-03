@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
         <link rel="SHORTCUT ICON" href="img/f.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
             <!--Индексация для поисковиков-->
         <!--LINKS-->
         <link rel="stylesheet" href="/public/css/style.css">
