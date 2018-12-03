@@ -9,7 +9,7 @@
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
-        <link rel="shortcut icon" href="/public/img/mini_logo.svg" type="image/svg">
+        <link rel="shortcut icon" href="/public/img/mini_logo.png" type="image/png">
             <!--Индексация для поисковиков-->
         <!--LINKS-->
         <link rel="stylesheet" href="/public/css/style.css">
