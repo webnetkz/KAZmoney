@@ -1,0 +1,29 @@
+* {
+   margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;     
+}
+
+#wrepper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#content {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+    background-color: rgba(54, 112, 151, 1);
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 3px;
+    box-shadow: 2px -3px 8px black;
+}
