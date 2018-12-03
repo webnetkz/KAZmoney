@@ -1,11 +1,14 @@
 // Script Date
 var MyDate = new Date();
 var year = MyDate.getFullYear();
-var p = document.createElement('p');
-p.className = "date";
-p.innerHTML = 'Qazaq Life® '+ year;
+var a = document.createElement('a');
 
-footer.appendChild(p);
+	a.className = "date";
+	a.innerHTML = 'Qazaq Life® '+ year;
+	a.setAttribute("href", "http://qazaqlife");
+	a.setAttribute("style", "text-decoration: none;");
+
+footer.appendChild(a);
 
         
     

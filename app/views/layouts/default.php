@@ -9,7 +9,7 @@
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
-        <link rel="SHORTCUT ICON" href="img/f.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/public/img/mini_logo.svg" type="image/svg">
             <!--Индексация для поисковиков-->
         <!--LINKS-->
         <link rel="stylesheet" href="/public/css/style.css">
@@ -136,7 +136,7 @@
                     1
                     1
                 </pre>
-        
+
         <footer id="footer">   
         </footer>
     </div>
