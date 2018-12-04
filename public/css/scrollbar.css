@@ -19,12 +19,3 @@
     ::-webkit-scrollbar-track {
     border-width:0;
 }
-
-/*Настройки скролбара для IE движка*/
-html,
-body {
-scrollbar-arrow-color: #fff; /* Цвет стрелок */
-scrollbar-base-color: #777; /* Цвет полосы прокрутки */
-scrollbar-shadow-color: #fed189; /* Цвет тени */
-scrollbar-highlight-color: #fff; /* Цвет светлых участков тени */
-}

@@ -14,6 +14,7 @@
         <!--LINKS-->
         <link rel="stylesheet" href="/public/css/style.css">
         <link rel="stylesheet" href="/public/css/scrollbar.css">
+        <link rel="stylesheet" href="/public/css/mobile_style.css">
         <!--SCRIPTS-->
         <script type="text/javascript" src="/public/js/jquery.js"></script>
         <script type="text/javascript" src="/public/js/ajax.js"></script>
