@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="/public/css/style.css">
         <link rel="stylesheet" href="/public/css/scrollbar.css">
         <link rel="stylesheet" href="/public/css/mobile_style.css">
+        <link rel="stylesheet" href="/public/css/menu.css">
         <!--SCRIPTS-->
         <script type="text/javascript" src="/public/js/jquery.js"></script>
         <script type="text/javascript" src="/public/js/ajax.js"></script>
@@ -31,119 +32,25 @@
     <body>
 	   
 
-    <div id="wrapper">
+   
         <div id="content">
             
-        </div>
-        
-
-                <pre>
-                    1
-                    1
-                    1
-                    
-                    1
-                    1
-
-                    1
-                    1
-                    1
-                    1
-                    1
-                    1
-
-                    1
-                    1
-                    1
-                    1
-                    1
-                    1
-
-                    1
-                    1
-                    1
-                    1
-                    1
-                    1
-                    1
-
-                    1
-                    1
-                    1
-                    1
-                    1
-
-                    1
-                    1
-                    1!!!1
-                    1
-                    1
-                    1
-                    1
-                    1
-                    1
-
-                    1
-                    1
-                    1
-                    1
-
-                    1
-                    1
-                    1
-
-                    1
-                    1
-                    1
-                    1
-                    1
-
-                    1
-                    1
-                    1
-                    1
-                    1
-                    1
-                    1
-                    1
-                    11
-
-                    1
-                    1
-                    1
-                    1
-                    1
-
-                    1213
-                    32
-                    3
-                    2
-                    3
-                    2
-                    3
-                    2
-                    32
-                    3
-                    2
-                    3
-                    2
-                    3
-                    2
-                    32
-                    3
-                    2
-                    3
-                    2
-                    1
-                    1
-                </pre>
+        <div id="hamburger-open"><span class="spans" id="spanOne"></span><span class="spans" id="spanTwo"></span><span class="spans" id="spanThree"></span></div>
+            <div class="modal-menu">
+              <h2 class="menuitem">Home</h2>
+              <h2 class="menuitem">Group News</h2>
+              <h2 class="menuitem">Careers</h2>
+              <h2 class="menuitem">Contact</h2>
+            </div>
 
         <footer id="footer">   
         </footer>
-    </div>
+    
 
         
         
     <script type="text/javascript" src="public/js/date.js"></script>
+    <script type="text/javascript" src="public/js/mo_for_menu.js"></script>
+    <script type="text/javascript" src="public/js/menu.js"></script>
     </body>
 </html>

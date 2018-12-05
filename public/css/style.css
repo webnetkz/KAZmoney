@@ -8,16 +8,6 @@ body {
     height: 100%;    
 }
 
-#wrepper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-#content {
-    flex: 1 0 auto;
-}
-
 footer {
     flex: 0 0 auto;
     background-color: rgba(54, 112, 151, 1);
