@@ -33,14 +33,7 @@
 	   
 
    
-        <div id="content" style="   background: rgba(133,188,255,1);
-        background: -moz-linear-gradient(left, rgba(133,188,255,1) 0%, rgba(133,188,255,1) 50%, rgba(93,160,255,1) 84%, rgba(77,148,255,1) 98%);
-        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(133,188,255,1)), color-stop(50%, rgba(133,188,255,1)), color-stop(84%, rgba(93,160,255,1)), color-stop(98%, rgba(77,148,255,1)));
-        background: -webkit-linear-gradient(left, rgba(133,188,255,1) 0%, rgba(133,188,255,1) 50%, rgba(93,160,255,1) 84%, rgba(77,148,255,1) 98%);
-        background: -o-linear-gradient(left, rgba(133,188,255,1) 0%, rgba(133,188,255,1) 50%, rgba(93,160,255,1) 84%, rgba(77,148,255,1) 98%);
-        background: -ms-linear-gradient(left, rgba(133,188,255,1) 0%, rgba(133,188,255,1) 50%, rgba(93,160,255,1) 84%, rgba(77,148,255,1) 98%);
-        background: linear-gradient(to right, rgba(133,188,255,1) 0%, rgba(133,188,255,1) 50%, rgba(93,160,255,1) 84%, rgba(77,148,255,1) 98%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85bcff', endColorstr='#4d94ff', GradientType=1 );
+        <div id="content" style="background-image: linear-gradient(to right top, #307fd6, #4c88d7, #6191d9, #739ada, #84a3db, #7ba0cf, #769cc2, #7398b5, #5f8597, #52727a, #475e60, #3e4a49);
         ">
             
         <div id="hamburger-open"><span class="spans" id="spanOne"></span><span class="spans" id="spanTwo"></span><span class="spans" id="spanThree"></span></div>

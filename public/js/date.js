@@ -6,7 +6,7 @@ var a = document.createElement('a');
 	a.className = "date";
 	a.innerHTML = 'WebNet ® '+ year;
 	a.setAttribute("href", "https://webnet.kz");
-	a.setAttribute("style", "text-decoration: none; text-shadow: -1px -1px 2px white;");
+	a.setAttribute("style", "text-decoration: none; text-shadow: 2px 2px 4px white;");
 
 footer.appendChild(a);
 
