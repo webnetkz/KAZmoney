@@ -17,11 +17,11 @@ body {
 #hamburger-open {
   z-index: 1;
   position: relative;
-  margin-left: 2%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  width: 60px;
-  height: 70px;
+  margin: 0;
+  padding: 10px;
+  padding-left: 2%;
+  width: 43px;
+  height: 43px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -141,10 +141,6 @@ body {
   transition-delay: 1s;
 }
 
-.text_menu {
-  font-weight: 900;
-  margin-bottom: 14px;
-}
 
 .link_menu {
   text-decoration: none;
