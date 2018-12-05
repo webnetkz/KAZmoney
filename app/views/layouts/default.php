@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="/public/css/style.css">
         <link rel="stylesheet" href="/public/css/scrollbar.css">
         <link rel="stylesheet" href="/public/css/mobile_style.css">
-        <link rel="stylesheet" href="/public/css/menu.css">
         <!--SCRIPTS-->
         <script type="text/javascript" src="/public/js/jquery.js"></script>
         <script type="text/javascript" src="/public/js/ajax.js"></script>
@@ -35,7 +34,7 @@
    
 
         <div id=allItems>
-            <pre><? var_dump($_SERVER);?></pre>
+            <pre><? //var_dump($_SERVER);?></pre>
         </div>
     
 
@@ -50,8 +49,5 @@
         
     <script type="text/javascript" src="public/js/jquery.js"></script>
     <script type="text/javascript" src="public/js/date.js"></script>
-    <script type="text/javascript" src="public/js/mo_for_menu.js"></script>
-    <script type="text/javascript" src="public/js/menu.js"></script>
-
     </body>
 </html>

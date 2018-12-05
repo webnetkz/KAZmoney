@@ -2,7 +2,7 @@
 // Подключение файла для отладки приложения
 require "app/lib/Dev.php";
 
-
+use app\core\Stat;
 use app\core\Router;
 use app\controllers\AccountController;
 
@@ -21,4 +21,9 @@ session_start();
 // Создание объекта и запуск метода
 $router = new Router;
 $router->run();
+
+$stat = new Stat;
+$stat->run_data();
+
+
 

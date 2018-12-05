@@ -10,7 +10,7 @@ class Db {
 
     public function __construct() {
         $config = require 'app/config/db.php';
-        $this->db = new PDO('mysql:host='.$config['host'].';dbname='.$config['name'].';port=3306', $config['user'], $config['pass']);
+        $this->db = new PDO('mysql:host='.$config['host'].';dbname='.$config['name'].';port='.$config['port'], $config['user'], $config['pass']);
     }
 
     public function query($sql, $params = []) {
