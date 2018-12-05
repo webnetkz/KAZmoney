@@ -2,8 +2,8 @@
 body, html {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
+  /*overflow: hidden;
+*/}
 
 body {
   position: relative;
@@ -19,7 +19,7 @@ body {
   margin: 0;
   padding: 10px;
   padding-left: 2%;
-  width: 23px;
+  width: 100px;
   height: 23px;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ body {
 }
 
 .spans {
-  width: 100%;
+  width: 50%;
   height: 10%;
   background-color: white;
   border-radius: 500px;
