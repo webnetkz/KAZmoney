@@ -10,7 +10,7 @@ class Stat {
 	public function __construct() {
 
 		$ip = $_SERVER['ROMOTE_ADDR'];
-		//$this->visit[$ip];
+		$this->visit[$ip];
 		debug($ip);
 	}
 

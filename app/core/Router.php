@@ -10,11 +10,18 @@ class Router {
 	// Массивы с параметрами класса
 	protected $routes = [];
 	protected $params = [];
+	public $visit = [];
 	
 	public function __construct() {
+
 		$ip = $_SERVER['REMOTE_ADDR'];
-		$this->visit[$ip];
-		debug();
+		$this->visit['ip'] = $ip;
+
+		$agent = $_SERVER['HTTP_USER_AGENT'];
+		$this->visit['agent'] = $agent;
+		
+		
+		//debug($this->visit);
 		
 		// Подключение файла конфигурации маршрутов
 		$arr = require 'app/config/routes.php';
