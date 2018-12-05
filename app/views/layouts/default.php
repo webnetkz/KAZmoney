@@ -4,7 +4,7 @@
         <title><?=$title?></title>
             <!--META-->
         <meta charset="UTF-8">
-        <meta name="author" content="Qazaq Life">
+        <meta name="author" content="TOO WebNet">
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,9 +33,9 @@
 	   
 
    
-        <div id="content" style="background-image: linear-gradient(to right top, #307fd6, #4c88d7, #6191d9, #739ada, #84a3db, #7ba0cf, #769cc2, #7398b5, #5f8597, #52727a, #475e60, #3e4a49);
+        <div id="content" style="background-image: linear-gradient(to right top, #307fd6, #4c88d7, #6191d9, #739ada, #84a3db, #7ba0cf, #769cc2, #7398b5, #5f8597, #52727a, #475e60, #3e4a49); box-shadow: 2px 2px 5px black; border-bottom-left-radius: 20px;
         ">
-            
+          
         <div id="hamburger-open"><span class="spans" id="spanOne"></span><span class="spans" id="spanTwo"></span><span class="spans" id="spanThree"></span></div>
             <div class="modal-menu">
                 <a href="http://webnet" class="link_menu">
@@ -49,31 +49,12 @@
                     <h2 class="menuitem">Контакты</h2>
                 </a>
          </div>
-
-    <pre>2
-    2
-2
-2
-
-2
-
-12
-3
-12
-3
-123
-12
-3
-12
-
-wq
-e
-qw
-e
-qw
+        </div>
+<? var_dump($_SERVER);?>
+    
 
 
-</pre>
+
 
 
         <footer id="footer">   

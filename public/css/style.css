@@ -9,14 +9,13 @@ body {
 }
 
 footer {
-    flex: 0 0 auto;
-    
-	background-image: radial-gradient(circle, #307fd6, #4c88d7, #6191d9, #739ada, #84a3db, #7ba0cf, #769cc2, #7398b5, #5f8597, #52727a, #475e60, #3e4a49);
+    position: fixed; 
+    left: 0; bottom: 0; 
+    width: 100%;
+
+	background-image: linear-gradient(to left, #307fd6, #4c88d7, #6191d9, #739ada, #84a3db, #7ba0cf, #769cc2, #7398b5, #5f8597, #52727a, #475e60, #3e4a49);
 
     text-align: center;
     padding: 3px;
     box-shadow: 1px -2px 12px black;
-}
-pre {
-	background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
