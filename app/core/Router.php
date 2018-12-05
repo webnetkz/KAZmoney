@@ -1,13 +1,12 @@
 <?php
-// Пространство имен
+
 namespace app\core;
 
 use app\core\View;
 
-// Класс Router
+
 class Router {
 	
-	// Массивы с параметрами класса
 	protected $routes = [];
 	protected $params = [];
 	public $visit = [];
@@ -38,7 +37,6 @@ class Router {
 
 		
 		
-		// Подключение файла конфигурации маршрутов
 		$arr = require 'app/config/routes.php';
 		
 		foreach ($arr as $key => $val) {
@@ -46,14 +44,12 @@ class Router {
 		}
 	}
 
-	// Метод добавления маршрута
 	public function add($route, $params) {
 
 		$route = '#^'.$route.'$#'; 
 		$this->routes[$route] = $params;
 	}
 	
-	// Метод проверки маршрута
 	public function match() {
 		
 		$url = trim($_SERVER['REQUEST_URI'], '/');
@@ -69,12 +65,10 @@ class Router {
 		return false;
 	}
 	
-	// Метод запуска маршрута
 	public function run() {
 		
 		if ($this->match() ) {
 			$path = 'app\controllers\\'.ucfirst($this->params['controller']).'Controller';
-			
 			
 			if (class_exists($path) ) {
 				$action = $this->params['action'].'Action';

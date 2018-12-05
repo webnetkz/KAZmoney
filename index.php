@@ -1,5 +1,5 @@
 <?php
-// Подключение файла для отладки приложения
+
 require "app/lib/Dev.php";
 
 use app\core\Stat;
@@ -14,11 +14,8 @@ spl_autoload_register(function($class){
 	}
 });
 
-// Запуск сессий
 session_start();
 
-
-// Создание объекта и запуск метода
 $router = new Router;
 $router->run();
 
