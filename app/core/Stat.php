@@ -39,4 +39,11 @@ class Stat {
 		debug($this->visit);
 	}
 
+		
+	
+
+
+
+	
+
 }

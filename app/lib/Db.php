@@ -10,7 +10,7 @@ class Db {
 
     public function __construct() {
         $config = require 'app/config/db.php';
-        $this->db = new PDO('mysql:host='.$config['host'].';dbname='.$config['name'].';port='.$config['port'], $config['user'], $config['pass']);
+        $this->db = new PDO($config['type'].':host='.$config['host'].';dbname='.$config['name'].';port='.$config['port'], $config['user'], $config['pass']);
     }
 
     public function query($sql, $params = []) {
@@ -28,16 +28,19 @@ class Db {
         return $query;
     }
 
-    // Метод возврата списка колонок
     public function row($sql, $params = []) {
         $result = $this->query($sql, $params);
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Метод возврата колонки
     public function column($sql, $params = []) {
         $result = $this->query($sql, $params);
         return $result->fetchColumn();
     }
+
+ 
+        //$this->db->exec('INSERT INTO `news` (`title`, `description`) VALUES ("go", "more")');
+
+
 
 }
