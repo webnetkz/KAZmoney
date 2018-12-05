@@ -35,14 +35,17 @@
    
         <div id="content">
             
-        <div id="hamburger-open"><span class="spans" id="spanOne"></span><span class="spans" id="spanTwo"></span><span class="spans" id="spanThree"></span></div>
+        <div id="hamburger-open"><span class="text_menu">МЕНЮ</span><span class="spans" id="spanOne"></span><span class="spans" id="spanTwo"></span><span class="spans" id="spanThree"></span></div>
             <div class="modal-menu">
-              <h2 class="menuitem">Home</h2>
-              <h2 class="menuitem">Group News</h2>
+                <a href="http://qazaqlife" class="link_menu">
+                    <h2 class="menuitem">Главная</h2>
+                </a>
+              <h2 class="menuitem">News</h2>
               <h2 class="menuitem">Careers</h2>
-              <h2 class="menuitem">Contact</h2>
-            </div>
-
+                <a href="http://qazaqlife/contact" class="link_menu">
+                    <h2 class="menuitem">Контакты</h2>
+                </a>
+         </div>
         <footer id="footer">   
         </footer>
     
