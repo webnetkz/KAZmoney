@@ -12,6 +12,9 @@ class Router {
 	protected $params = [];
 	
 	public function __construct() {
+		$ip = $_SERVER['REMOTE_ADDR'];
+		$this->visit[$ip];
+		debug();
 		
 		// Подключение файла конфигурации маршрутов
 		$arr = require 'app/config/routes.php';
