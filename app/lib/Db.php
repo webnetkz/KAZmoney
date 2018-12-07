@@ -39,7 +39,7 @@ class Db {
     }
 
  
-        //$this->db->exec('INSERT INTO `news` (`title`, `description`) VALUES ("go", "more")');
+        //  $this->db->exec('INSERT INTO `news` (`title`, `description`) VALUES ("go", "more")');
 
 
 

@@ -1,4 +1,6 @@
 /* Smartphones (вертикальная) ----------- */
 @media only screen and (max-width: 420px) {
-	
+	#hellopreloader_preload {
+		width: 100%;
+	}
 }
