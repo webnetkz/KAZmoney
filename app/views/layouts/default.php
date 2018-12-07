@@ -40,8 +40,9 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.5) url(http://hello-site.ru//main/images/preloads/rings.svg) center center no-repeat;
-            
+
             background-size:135px;
+            overflow: hidden;
         }
         #preloader_webnet {
             text-align: center;
