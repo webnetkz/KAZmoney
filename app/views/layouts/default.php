@@ -20,7 +20,9 @@
         <script type="text/javascript" src="/public/js/ajax.js"></script>
         <!--STYLES-->
         <style type="text/css">
-
+            body {
+                overflow: hidden;
+            }
             .date {
                 font-family: serif;
                 color: white;
@@ -30,7 +32,7 @@
         </style>
         <style type="text/css">
         #hellopreloader>p{
-            display:none;
+            display: none;
         }
         #hellopreloader_preload{
             display: block;
@@ -42,7 +44,6 @@
             background: rgba(0, 0, 0, 0.5) url(http://hello-site.ru//main/images/preloads/rings.svg) center center no-repeat;
 
             background-size:135px;
-            overflow: hidden;
         }
         #preloader_webnet {
             text-align: center;

@@ -1,4 +1,12 @@
 /* Smartphones (вертикальная) ----------- */
 @media only screen and (max-width: 420px) {
-	
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	html,
+	body {
+		width: 100%;
+	}
 }
