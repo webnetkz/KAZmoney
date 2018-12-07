@@ -36,7 +36,7 @@ class Stat {
 	}
 
 	public function run_data() {
-		debug($this->visit);
+		
 	}
 
 		

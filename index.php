@@ -20,7 +20,7 @@ $router = new Router;
 $router->run();
 
 $stat = new Stat;
-$stat->run_data();
+
 
 
 

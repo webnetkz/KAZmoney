@@ -10,7 +10,7 @@ class Db {
 
     public function __construct() {
         $config = require 'app/config/db.php';
-        $this->db = new PDO($config['type'].':host='.$config['host'].';dbname='.$config['name'].';port='.$config['port'], $config['user'], $config['pass']);
+        $this->db = new PDO($config['driver'].':host='.$config['host'].';dbname='.$config['name'].';port='.$config['port'], $config['user'], $config['pass']);
     }
 
     public function query($sql, $params = []) {
@@ -38,8 +38,6 @@ class Db {
         return $result->fetchColumn();
     }
 
- 
-        //  $this->db->exec('INSERT INTO `news` (`title`, `description`) VALUES ("go", "more")');
 
 
 

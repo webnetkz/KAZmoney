@@ -20,37 +20,38 @@
         <script type="text/javascript" src="/public/js/ajax.js"></script>
         <!--STYLES-->
         <style type="text/css">
-            body {
-                overflow: hidden;
-            }
+
             .date {
                 font-family: serif;
                 color: white;
                 margin: 5px;
             }
 
-        </style>
-        <style type="text/css">
-        #hellopreloader>p{
-            display: none;
-        }
-        #hellopreloader_preload{
-            display: block;
-            position: fixed;
-            z-index: 99999;
-            top: 0;left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5) url(http://hello-site.ru//main/images/preloads/rings.svg) center center no-repeat;
+            #hellopreloader>p{
+                display: none;
+            }
 
-            background-size:135px;
-        }
-        #preloader_webnet {
-            text-align: center;
-            margin: 10%;
-            color: white;
-            font-size: 4em;
-        }
+
+            #preloader_webnet {
+                text-align: center;
+                margin: 10%;
+                color: white;
+                font-size: 4em;
+                text-shadow: 1px 2px 10px black;
+            }
+
+            #hellopreloader_preload {
+                display: block;
+                position: fixed;
+                z-index: 99999;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size:135px;
+                background: rgba(0, 0 , 0, 0.5 ) url(/public/img/preloader.svg) center center no-repeat;
+            }
+
         </style>
             
 
