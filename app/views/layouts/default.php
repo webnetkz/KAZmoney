@@ -9,16 +9,15 @@
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
+
         <link rel="shortcut icon" href="/public/img/mini_logo.png" type="image/png">
-            <!--Индексация для поисковиков-->
-        <!--LINKS-->
         <link rel="stylesheet" href="/public/css/style.css">
         <link rel="stylesheet" href="/public/css/scrollbar.css">
         <link rel="stylesheet" href="/public/css/mobile_style.css">
-        <!--SCRIPTS-->
+
         <script type="text/javascript" src="/public/js/jquery.js"></script>
         <script type="text/javascript" src="/public/js/ajax.js"></script>
-        <!--STYLES-->
+
         <style type="text/css">
 
             .date {
@@ -26,20 +25,21 @@
                 color: white;
                 margin: 5px;
             }
-            details {
-                text-align: center;
-            }
 
         </style>           
     </head>
     <body>
 	   
-        <main>
+        <main class="all_content">
             
-            <details>
+            <details class="menu_block">
                 <summary>MENU</summary>
                 <nav>
-                    <a href="https://webnet.kz/">Home</a>
+                    <a href="http://webnet/" class="link_menu">Home</a>
+                    <a href="http://webnet/contact/" class="link_menu">Contact</a>
+                    <a href="http://webnet/account/register/" class="link_menu">Register</a>
+                    <a href="http://webnet/account/login/" class="link_menu">Sign in</a>
+                    <a href="http://webnet/news/show/" class="link_menu">News</a>
                 </nav> 
             </details>
 
