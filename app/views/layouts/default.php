@@ -66,9 +66,22 @@
    
 
         <div id=allItems>
-            <pre><? //var_dump($_SERVER);?></pre>
+            <form>
+                <details>
+                    <summary>form</summary>
+                    <input type="text" name="">
+                    <option>web</option>
+                    <option>net</option>
+                </details>
+            </form>
         </div>
-    
+        <meter value="2">d</meter>
+        <progress value="33" max="100" style="width: 100%;">
+
+    <details>
+        <summary>Hello php</summary>
+        <pre><? var_dump($_SERVER);?></pre>
+    </details>
 
 
 
