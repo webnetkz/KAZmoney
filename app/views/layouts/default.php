@@ -26,32 +26,29 @@
                 color: white;
                 margin: 5px;
             }
-        </style>
-            
+            details {
+                text-align: center;
+            }
 
+        </style>           
     </head>
     <body>
 	   
-    
-   
+        <main>
+            
+            <details>
+                <summary>MENU</summary>
+                <nav>
+                    <a href="https://webnet.kz/">Home</a>
+                </nav> 
+            </details>
 
-        
-
-    <details>
-        <summary>Hello php</summary>
-        <pre><? var_dump($_SERVER);?></pre>
-    </details>
-
-
-
-
-
-        <footer id="footer">
+            <footer id="footer">
               
-        </footer>
-    
+            </footer>
 
-    
+        </main>
+        
     <script type="text/javascript" src="public/js/jquery.js"></script>
     <script type="text/javascript" src="public/js/date.js"></script>
     </body>
