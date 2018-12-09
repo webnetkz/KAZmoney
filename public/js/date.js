@@ -1,4 +1,3 @@
-// Script Date
 var MyDate = new Date();
 var year = MyDate.getFullYear();
 var a = document.createElement('a');
