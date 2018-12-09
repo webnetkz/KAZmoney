@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <title><?=$title?></title>
-            <!--META-->
+
         <meta charset="UTF-8">
         <meta name="author" content="TOO "WebNet">
         <meta name="description" content="">
@@ -30,18 +30,22 @@
     </head>
     <body>
 	   
-        <main class="all_content">
+        <main id="main" class="all_content">
             
-            <details class="menu_block">
+            <header>
+                <details class="menu_block">
                 <summary>MENU</summary>
-                <nav>
-                    <a href="http://webnet/" class="link_menu">Home</a>
-                    <a href="http://webnet/contact/" class="link_menu">Contact</a>
-                    <a href="http://webnet/account/register/" class="link_menu">Register</a>
-                    <a href="http://webnet/account/login/" class="link_menu">Sign in</a>
-                    <a href="http://webnet/news/show/" class="link_menu">News</a>
-                </nav> 
-            </details>
+                    <nav class="container">
+                        <a href="http://webnet/" class="link_menu">Home</a>
+                        <a href="http://webnet/contact/" class="link_menu">Contact</a>
+                        <a href="http://webnet/account/register/" class="link_menu">Register</a>
+                        <a href="http://webnet/account/login/" class="link_menu">Sign in</a>
+                        <a href="http://webnet/news/show/" class="link_menu">News</a>
+                    </nav> 
+                </details>
+            </header>
+                
+                
 
             <footer id="footer">
               
@@ -49,7 +53,8 @@
 
         </main>
         
-    <script type="text/javascript" src="public/js/jquery.js"></script>
-    <script type="text/javascript" src="public/js/date.js"></script>
+        <script type="text/javascript" src="/public/js/jquery.js"></script>
+        <script type="text/javascript" src="/public/js/date.js"></script>
+
     </body>
 </html>
