@@ -1,0 +1,1275 @@
+/* line 1, ../sass/project/project-top.scss */
+#ProjectTop {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: calc(44vh - 70px);
+  min-height: 280px;
+  border-bottom: 1px solid #383838;
+  margin-top: 70px;
+}
+/* line 14, ../sass/project/project-top.scss */
+#ProjectTop:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background: url(../imgNew/asteroid14.png) center center no-repeat;
+  background-size: 40%;
+  z-index: 1;
+  transform: rotate(-90deg);
+}
+/* line 28, ../sass/project/project-top.scss */
+#ProjectTop:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background: url(../imgNew/asteroid15.png) 68% 40% no-repeat;
+  background-size: 57%;
+  z-index: 1;
+}
+
+/* line 42, ../sass/project/project-top.scss */
+.ProjectTopB {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: calc(100% / 4);
+  height: 100%;
+}
+/* line 54, ../sass/project/project-top.scss */
+.ProjectTopB.Crumbs ul {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+  max-width: 90%;
+}
+/* line 62, ../sass/project/project-top.scss */
+.ProjectTopB.Crumbs ul li, .ProjectTopB.Crumbs ul b {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  line-height: 1.4;
+}
+/* line 68, ../sass/project/project-top.scss */
+.ProjectTopB.Crumbs ul li a, .ProjectTopB.Crumbs ul b a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #bab9b9;
+}
+/* line 77, ../sass/project/project-top.scss */
+.ProjectTopB.Crumbs ul li a:hover, .ProjectTopB.Crumbs ul b a:hover {
+  color: #29b8f2;
+}
+/* line 82, ../sass/project/project-top.scss */
+.ProjectTopB.Crumbs ul li.active, .ProjectTopB.Crumbs ul b.active {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 91, ../sass/project/project-top.scss */
+.ProjectTopB.Crumbs ul b {
+  font-size: 12px;
+  font-weight: 700;
+  color: #bab9b9;
+  margin: 0 5px;
+}
+/* line 101, ../sass/project/project-top.scss */
+.ProjectTopB.Nav span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+/* line 107, ../sass/project/project-top.scss */
+.ProjectTopB.Nav span p {
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+/* line 116, ../sass/project/project-top.scss */
+.ProjectTopB.Nav span ul {
+  position: relative;
+  overflow: hidden;
+}
+/* line 120, ../sass/project/project-top.scss */
+.ProjectTopB.Nav span ul li {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+/* line 126, ../sass/project/project-top.scss */
+.ProjectTopB.Nav span ul li a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 55px;
+  line-height: 55px;
+  border: 1px solid #fff;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+/* line 140, ../sass/project/project-top.scss */
+.ProjectTopB.Nav span ul li a:hover {
+  border: 1px solid #29b8f2;
+  background: #29b8f2;
+}
+/* line 151, ../sass/project/project-top.scss */
+.ProjectTopB.NavList span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  max-width: 65%;
+}
+/* line 158, ../sass/project/project-top.scss */
+.ProjectTopB.NavList span p {
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+/* line 167, ../sass/project/project-top.scss */
+.ProjectTopB.NavList span ul {
+  position: relative;
+  overflow: hidden;
+}
+/* line 171, ../sass/project/project-top.scss */
+.ProjectTopB.NavList span ul li {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 181, ../sass/project/project-top.scss */
+.ProjectTopB.NavList span ul li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+  color: #000;
+  font-size: 16px;
+  background: #ededed;
+}
+/* line 190, ../sass/project/project-top.scss */
+.ProjectTopB.NavList span ul li a:hover {
+  background: #29b8f2;
+}
+/* line 196, ../sass/project/project-top.scss */
+.ProjectTopB.NavList span ul li.active a {
+  background: #29b8f2;
+}
+/* line 201, ../sass/project/project-top.scss */
+.ProjectTopB.NavList span ul li:nth-child(2) {
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1820px) {
+  /* line 214, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span {
+    max-width: 75%;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  /* line 226, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span {
+    max-width: 85%;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  /* line 240, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li.active, .ProjectTopB.Crumbs ul b.active {
+    font-size: 32px;
+  }
+  /* line 251, ../sass/project/project-top.scss */
+  .ProjectTopB.Nav span ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+  /* line 263, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span {
+    max-width: 90%;
+  }
+  /* line 267, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span ul li {
+    margin-bottom: 15px;
+    margin-right: 15px;
+    height: 34px;
+    line-height: 34px;
+  }
+  /* line 273, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span ul li a {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1199px) {
+  /* line 290, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li, .ProjectTopB.Crumbs ul b {
+    font-size: 11px;
+  }
+  /* line 293, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li a, .ProjectTopB.Crumbs ul b a {
+    font-size: 11px;
+  }
+  /* line 297, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li.active, .ProjectTopB.Crumbs ul b.active {
+    font-size: 26px;
+  }
+  /* line 308, ../sass/project/project-top.scss */
+  .ProjectTopB.Nav span ul li a {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 15px;
+    font-size: 16px;
+  }
+  /* line 320, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span {
+    max-width: 90%;
+  }
+  /* line 324, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span ul li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    height: 34px;
+    line-height: 34px;
+  }
+  /* line 330, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span ul li a {
+    padding: 0 15px;
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 999px) {
+  /* line 347, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li, .ProjectTopB.Crumbs ul b {
+    font-size: 10px;
+  }
+  /* line 350, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li a, .ProjectTopB.Crumbs ul b a {
+    font-size: 10px;
+  }
+  /* line 354, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li.active, .ProjectTopB.Crumbs ul b.active {
+    font-size: 20px;
+  }
+  /* line 363, ../sass/project/project-top.scss */
+  .ProjectTopB.Nav span p {
+    font-size: 12px;
+  }
+  /* line 369, ../sass/project/project-top.scss */
+  .ProjectTopB.Nav span ul li a {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  /* line 381, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span {
+    max-width: 90%;
+  }
+  /* line 385, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span ul li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    height: 30px;
+    line-height: 30px;
+  }
+  /* line 391, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span ul li a {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 541px) and (max-width: 749px) {
+  /* line 405, ../sass/project/project-top.scss */
+  #ProjectTop {
+    height: 25vw;
+  }
+
+  /* line 409, ../sass/project/project-top.scss */
+  .ProjectTopB {
+    display: none;
+    width: calc(100% / 2);
+    height: 100%;
+  }
+  /* line 414, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    z-index: 2;
+  }
+  /* line 423, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li, .ProjectTopB.Crumbs ul b {
+    font-size: 11px;
+  }
+  /* line 426, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li a, .ProjectTopB.Crumbs ul b a {
+    font-size: 11px;
+  }
+  /* line 430, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li.active, .ProjectTopB.Crumbs ul b.active {
+    font-size: 26px;
+  }
+  /* line 437, ../sass/project/project-top.scss */
+  .ProjectTopB.Nav {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    z-index: 2;
+  }
+  /* line 448, ../sass/project/project-top.scss */
+  .ProjectTopB.Nav span ul li a {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 15px;
+    font-size: 16px;
+  }
+  /* line 459, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    z-index: 2;
+  }
+  /* line 467, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span {
+    max-width: 90%;
+  }
+  /* line 471, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span ul li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    height: 34px;
+    line-height: 34px;
+  }
+  /* line 477, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span ul li a {
+    padding: 0 15px;
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 540px) {
+  /* line 491, ../sass/project/project-top.scss */
+  #ProjectTop {
+    display: block;
+    height: auto;
+  }
+  /* line 495, ../sass/project/project-top.scss */
+  #ProjectTop:before {
+    display: none;
+  }
+  /* line 499, ../sass/project/project-top.scss */
+  #ProjectTop:after {
+    display: none;
+  }
+
+  /* line 504, ../sass/project/project-top.scss */
+  .ProjectTopB {
+    width: 100%;
+    height: auto;
+    margin-top: 5vw;
+  }
+  /* line 509, ../sass/project/project-top.scss */
+  .ProjectTopB:nth-child(1), .ProjectTopB:nth-child(4) {
+    display: none;
+  }
+  /* line 513, ../sass/project/project-top.scss */
+  .ProjectTopB:nth-child(2) {
+    border-bottom: 1px solid #383838;
+    padding-bottom: 4vw;
+  }
+  /* line 522, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li a, .ProjectTopB.Crumbs ul b a {
+    font-size: 4vw;
+  }
+  /* line 526, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul li.active, .ProjectTopB.Crumbs ul b.active {
+    font-size: 7vw;
+  }
+  /* line 531, ../sass/project/project-top.scss */
+  .ProjectTopB.Crumbs ul b {
+    font-size: 4vw;
+  }
+  /* line 538, ../sass/project/project-top.scss */
+  .ProjectTopB.Nav span {
+    max-width: 90%;
+  }
+  /* line 541, ../sass/project/project-top.scss */
+  .ProjectTopB.Nav span p {
+    font-size: 4vw;
+    margin-bottom: 5vw;
+  }
+  /* line 547, ../sass/project/project-top.scss */
+  .ProjectTopB.Nav span ul li {
+    margin-bottom: 5vw;
+  }
+  /* line 550, ../sass/project/project-top.scss */
+  .ProjectTopB.Nav span ul li a {
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    display: inline-flex;
+    -ms-align-items: center;
+    align-items: center;
+    text-align: center;
+    height: 14vw;
+    line-height: 1.4;
+    padding: 0 5vw;
+    font-size: 4vw;
+  }
+  /* line 570, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span {
+    max-width: 90%;
+  }
+  /* line 573, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span p {
+    font-size: 4vw;
+    margin-bottom: 5vw;
+  }
+  /* line 579, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span ul li {
+    margin-bottom: 4vw;
+    margin-right: 4vw;
+    height: 10vw;
+    line-height: 10vw;
+  }
+  /* line 585, ../sass/project/project-top.scss */
+  .ProjectTopB.NavList span ul li a {
+    padding: 0 4vw;
+    font-size: 4vw;
+  }
+}
+/* line 1, ../sass/project/project-result.scss */
+#ProjectResult {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, ../sass/project/project-result.scss */
+.ProjectResultB {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #383838;
+  height: 25vw;
+}
+/* line 13, ../sass/project/project-result.scss */
+.ProjectResultB.BlackText .ProjectResultBDesc {
+  color: #0e131a;
+}
+/* line 16, ../sass/project/project-result.scss */
+.ProjectResultB.BlackText .ProjectResultBDesc a {
+  color: #0e131a;
+  border-color: #0e131a;
+  background: url(../imgNew/icon-slider-link-right-black.svg) calc(100% - 20px) center no-repeat;
+  background-size: auto 20px;
+}
+/* line 22, ../sass/project/project-result.scss */
+.ProjectResultB.BlackText .ProjectResultBDesc a:hover {
+  color: #fff;
+  background: #0e131a url(../imgNew/icon-slider-link-right.svg) calc(100% - 20px) center no-repeat;
+  background-size: auto 20px;
+}
+
+/* line 32, ../sass/project/project-result.scss */
+.ProjectResultBInner {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin: 2.5vw 12vw;
+  height: calc(100% - 5vw);
+}
+
+/* line 44, ../sass/project/project-result.scss */
+.ProjectResultBDesc {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 50%;
+  color: #fff;
+  padding-left: 3%;
+}
+/* line 64, ../sass/project/project-result.scss */
+.ProjectResultBDesc strong {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+/* line 74, ../sass/project/project-result.scss */
+.ProjectResultBDesc p {
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+/* line 82, ../sass/project/project-result.scss */
+.ProjectResultBDesc span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+/* line 88, ../sass/project/project-result.scss */
+.ProjectResultBDesc a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  border: 1px solid #fff;
+  padding: 0 20px;
+  padding-right: 63px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 42px;
+  background: url(../imgNew/icon-slider-link-right.svg) calc(100% - 20px) center no-repeat;
+  background-size: auto 20px;
+}
+/* line 102, ../sass/project/project-result.scss */
+.ProjectResultBDesc a:hover {
+  border: 1px solid #29b8f2;
+  background: #29b8f2 url(../imgNew/icon-slider-link-right.svg) calc(100% - 20px) center no-repeat;
+  background-size: auto 20px;
+}
+
+/* line 111, ../sass/project/project-result.scss */
+.ProjectResultBImg {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+}
+/* line 121, ../sass/project/project-result.scss */
+.ProjectResultBImg img {
+  display: block;
+  margin: auto;
+  max-width: 95%;
+  max-height: 95%;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  /* line 130, ../sass/project/project-result.scss */
+  .ProjectResultBDesc {
+    width: 52%;
+  }
+  /* line 133, ../sass/project/project-result.scss */
+  .ProjectResultBDesc strong {
+    font-size: 22px;
+  }
+  /* line 137, ../sass/project/project-result.scss */
+  .ProjectResultBDesc p {
+    font-size: 15px;
+  }
+  /* line 141, ../sass/project/project-result.scss */
+  .ProjectResultBDesc a {
+    height: 36px;
+    padding: 0 20px;
+    padding-right: 55px;
+    font-size: 14px;
+    line-height: 38px;
+    background: url(../imgNew/icon-slider-link-right.svg) calc(100% - 20px) center no-repeat;
+    background-size: auto 16px;
+    margin-top: 20px;
+  }
+  /* line 151, ../sass/project/project-result.scss */
+  .ProjectResultBDesc a:hover {
+    background: #29b8f2 url(../imgNew/icon-slider-link-right.svg) calc(100% - 20px) center no-repeat;
+    background-size: auto 16px;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1199px) {
+  /* line 160, ../sass/project/project-result.scss */
+  .ProjectResultBInner {
+    margin: 1.5vw 12vw;
+    height: calc(100% - 3vw);
+  }
+
+  /* line 165, ../sass/project/project-result.scss */
+  .ProjectResultBDesc {
+    width: 69%;
+  }
+  /* line 168, ../sass/project/project-result.scss */
+  .ProjectResultBDesc strong {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  /* line 173, ../sass/project/project-result.scss */
+  .ProjectResultBDesc p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  /* line 179, ../sass/project/project-result.scss */
+  .ProjectResultBDesc a {
+    height: 37px;
+    font-size: 14px;
+    line-height: 37px;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 999px) {
+  /* line 188, ../sass/project/project-result.scss */
+  .ProjectResultBInner {
+    margin: 1.5vw 10vw;
+    height: calc(100% - 3vw);
+  }
+
+  /* line 193, ../sass/project/project-result.scss */
+  .ProjectResultBDesc {
+    width: 70%;
+  }
+  /* line 196, ../sass/project/project-result.scss */
+  .ProjectResultBDesc strong {
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
+  /* line 201, ../sass/project/project-result.scss */
+  .ProjectResultBDesc p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  /* line 207, ../sass/project/project-result.scss */
+  .ProjectResultBDesc a {
+    height: 35px;
+    font-size: 13px;
+    line-height: 35px;
+    padding-right: 50px;
+    background: url(../imgNew/icon-slider-link-right.svg) calc(100% - 20px) center no-repeat;
+    background-size: auto 15px;
+  }
+}
+@media only screen and (min-width: 541px) and (max-width: 749px) {
+  /* line 219, ../sass/project/project-result.scss */
+  .ProjectResultB {
+    height: 30vw;
+  }
+
+  /* line 223, ../sass/project/project-result.scss */
+  .ProjectResultBInner {
+    margin: 1vw 8vw;
+    height: calc(100% - 2vw);
+  }
+
+  /* line 228, ../sass/project/project-result.scss */
+  .ProjectResultBDesc {
+    width: 70%;
+  }
+  /* line 231, ../sass/project/project-result.scss */
+  .ProjectResultBDesc strong {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  /* line 236, ../sass/project/project-result.scss */
+  .ProjectResultBDesc p {
+    font-size: 13px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  /* line 242, ../sass/project/project-result.scss */
+  .ProjectResultBDesc a {
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    padding-right: 45px;
+    background: url(../imgNew/icon-slider-link-right.svg) calc(100% - 20px) center no-repeat;
+    background-size: auto 12px;
+  }
+
+  /* line 254, ../sass/project/project-result.scss */
+  .ProjectResultB.BlackText .ProjectResultBDesc a {
+    color: #0e131a;
+    border-color: #0e131a;
+    background: url(../imgNew/icon-slider-link-right-black.svg) calc(100% - 20px) center no-repeat;
+    background-size: auto 12px;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 540px) {
+  /* line 266, ../sass/project/project-result.scss */
+  .ProjectResultB {
+    height: 60vw;
+  }
+  /* line 270, ../sass/project/project-result.scss */
+  .ProjectResultB.BlackText .ProjectResultBDesc {
+    color: #0e131a;
+  }
+  /* line 273, ../sass/project/project-result.scss */
+  .ProjectResultB.BlackText .ProjectResultBDesc a {
+    color: #0e131a;
+    border-color: #0e131a;
+    background: url(../imgNew/icon-slider-link-right-black.svg) calc(100% - 20px) center no-repeat;
+    background-size: auto 20px;
+  }
+  /* line 279, ../sass/project/project-result.scss */
+  .ProjectResultB.BlackText .ProjectResultBDesc a:hover {
+    color: #29b8f2;
+    border: 1px solid #29b8f2;
+    background: url(../imgNew/icon-slider-link-right-h.svg) calc(100% - 20px) center no-repeat;
+    background-size: auto 20px;
+  }
+
+  /* line 290, ../sass/project/project-result.scss */
+  .ProjectResultBInner {
+    margin: 2vw 2vw;
+    height: calc(100% - 4vw);
+  }
+
+  /* line 295, ../sass/project/project-result.scss */
+  .ProjectResultBDesc {
+    width: 100%;
+    text-align: center;
+    padding: 2vw;
+  }
+  /* line 301, ../sass/project/project-result.scss */
+  .ProjectResultBDesc strong {
+    font-size: 6vw;
+  }
+  /* line 305, ../sass/project/project-result.scss */
+  .ProjectResultBDesc p {
+    font-size: 3vw;
+    margin-bottom: 4vw;
+  }
+  /* line 310, ../sass/project/project-result.scss */
+  .ProjectResultBDesc a {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    border: 1px solid #fff;
+    padding: 0 20px;
+    padding-right: 55px;
+    font-size: 13px;
+    color: #fff;
+    line-height: 30px;
+    background: url(../imgNew/icon-slider-link-right.svg) calc(100% - 20px) center no-repeat;
+    background-size: auto 14px;
+    margin-top: 4vw;
+  }
+
+  /* line 327, ../sass/project/project-result.scss */
+  .ProjectResultBImg {
+    display: none;
+  }
+}
+/* line 1, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-bottom: 1px solid #383838;
+  height: 25vw;
+  padding: 0 25%;
+  padding-top: 6vw;
+}
+/* line 10, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background: url(../imgNew/asteroid13.png) center center no-repeat;
+  background-size: 30%;
+  z-index: 1;
+}
+/* line 23, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background: url(../imgNew/asteroid14.png) center center no-repeat;
+  background-size: 35%;
+  z-index: 1;
+}
+/* line 36, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 41, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 60px;
+  width: 60px;
+  margin: 0 10px;
+}
+/* line 52, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li:nth-child(1), #ProjectResultPiganation .pagination li:nth-last-child(1) {
+  display: none;
+}
+/* line 56, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li:nth-child(2) {
+  margin-right: 40px;
+  font-size: 0px;
+}
+/* line 60, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li:nth-child(2).disabled {
+  display: inline-block !important;
+  border: 1px solid #888b8e;
+  background: url(../imgNew/icon-pagination-g.png) center center no-repeat;
+  background-size: auto 14px;
+}
+/* line 67, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li:nth-child(2) a {
+  font-size: 0px;
+  background: url(../imgNew/icon-pagination-w.png) center center no-repeat;
+  background-size: auto 14px;
+}
+/* line 72, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li:nth-child(2) a:hover {
+  background: url(../imgNew/icon-pagination-b.png) center center no-repeat;
+  background-size: auto 14px;
+}
+/* line 79, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li:nth-last-child(2) {
+  margin-left: 40px;
+  font-size: 0px;
+}
+/* line 83, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li:nth-last-child(2).disabled {
+  display: inline-block !important;
+  border: 1px solid #888b8e;
+  background: url(../imgNew/icon-pagination-g.png) center center no-repeat;
+  background-size: auto 14px;
+  transform: rotate(180deg);
+}
+/* line 91, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li:nth-last-child(2) a {
+  font-size: 0px;
+  background: url(../imgNew/icon-pagination-w.png) center center no-repeat;
+  background-size: auto 14px;
+  transform: rotate(180deg);
+}
+/* line 97, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li:nth-last-child(2) a:hover {
+  background: url(../imgNew/icon-pagination-b.png) center center no-repeat;
+  background-size: auto 14px;
+}
+/* line 104, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+}
+/* line 118, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li a:hover {
+  color: #29b8f2;
+  border-color: #29b8f2;
+}
+/* line 125, ../sass/project/project-pagination.scss */
+#ProjectResultPiganation .pagination li.active a {
+  color: #29b8f2;
+  border-color: #29b8f2;
+}
+
+/* line 134, ../sass/project/project-pagination.scss */
+#ProjectBrief {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 3.8vw;
+}
+/* line 140, ../sass/project/project-pagination.scss */
+#ProjectBrief p {
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  color: #eaeaea;
+  line-height: 1.4;
+  margin-bottom: 1vw;
+}
+/* line 148, ../sass/project/project-pagination.scss */
+#ProjectBrief p span {
+  display: block;
+}
+/* line 153, ../sass/project/project-pagination.scss */
+#ProjectBrief a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 52px;
+  line-height: 52px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #29b8f2;
+  padding: 0 43px;
+}
+/* line 168, ../sass/project/project-pagination.scss */
+#ProjectBrief a:hover {
+  color: #29b8f2;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  /* line 176, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation {
+    padding-top: 4vw;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1199px) {
+  /* line 183, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation {
+    height: 24vw;
+    padding: 0 25%;
+    padding-top: 2vw;
+  }
+  /* line 189, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li {
+    height: 56px;
+    width: 56px;
+  }
+  /* line 193, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li a {
+    line-height: 56px;
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 999px) {
+  /* line 206, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation {
+    height: 24vw;
+    padding: 0 25%;
+    padding-top: 2vw;
+  }
+  /* line 212, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li {
+    height: 50px;
+    width: 50px;
+    margin: 0 7px;
+  }
+  /* line 217, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li a {
+    line-height: 50px;
+    font-size: 20px;
+  }
+
+  /* line 225, ../sass/project/project-pagination.scss */
+  #ProjectBrief {
+    margin-top: 1vw;
+  }
+  /* line 228, ../sass/project/project-pagination.scss */
+  #ProjectBrief p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 1vw;
+  }
+  /* line 234, ../sass/project/project-pagination.scss */
+  #ProjectBrief a {
+    height: 47px;
+    line-height: 47px;
+    font-size: 15px;
+    padding: 0 34px;
+  }
+}
+@media only screen and (min-width: 541px) and (max-width: 749px) {
+  /* line 246, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation {
+    height: 30vw;
+    padding: 0 25%;
+    padding-top: 4vw;
+  }
+  /* line 252, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li {
+    height: 40px;
+    width: 40px;
+    margin: 0 7px;
+  }
+  /* line 257, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-child(2) {
+    margin-right: 30px;
+  }
+  /* line 261, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-last-child(2) {
+    margin-left: 30px;
+  }
+  /* line 265, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li a {
+    line-height: 40px;
+    font-size: 16px;
+  }
+
+  /* line 273, ../sass/project/project-pagination.scss */
+  #ProjectBrief {
+    margin-top: 3vw;
+  }
+  /* line 276, ../sass/project/project-pagination.scss */
+  #ProjectBrief p {
+    font-size: 13px;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+  }
+  /* line 282, ../sass/project/project-pagination.scss */
+  #ProjectBrief a {
+    height: 37px;
+    line-height: 37px;
+    font-size: 12px;
+    padding: 0px 25px;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 540px) {
+  /* line 294, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation {
+    height: auto;
+    padding: 0 5vw;
+    padding-top: 5vw;
+  }
+  /* line 299, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation:before {
+    display: none;
+  }
+  /* line 303, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation:after {
+    display: none;
+  }
+  /* line 308, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li {
+    height: 14vw;
+    width: 14vw;
+    margin: 0 2vw;
+  }
+  /* line 313, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-child(1), #ProjectResultPiganation .pagination li:nth-last-child(1) {
+    display: none;
+  }
+  /* line 317, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-child(2) {
+    margin-right: 6vw;
+  }
+  /* line 320, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-child(2).disabled {
+    background: url(../imgNew/icon-pagination-g.png) center center no-repeat;
+    background-size: auto 4vw;
+  }
+  /* line 325, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-child(2) a {
+    background: url(../imgNew/icon-pagination-w.png) center center no-repeat;
+    background-size: auto 4vw;
+  }
+  /* line 329, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-child(2) a:hover {
+    background: url(../imgNew/icon-pagination-b.png) center center no-repeat;
+    background-size: auto 4vw;
+  }
+  /* line 336, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-last-child(2) {
+    margin-left: 6vw;
+    font-size: 0px;
+  }
+  /* line 340, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-last-child(2).disabled {
+    background: url(../imgNew/icon-pagination-g.png) center center no-repeat;
+    background-size: auto 4vw;
+  }
+  /* line 345, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-last-child(2) a {
+    background: url(../imgNew/icon-pagination-w.png) center center no-repeat;
+    background-size: auto 4vw;
+  }
+  /* line 349, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li:nth-last-child(2) a:hover {
+    background: url(../imgNew/icon-pagination-b.png) center center no-repeat;
+    background-size: auto 4vw;
+  }
+  /* line 356, ../sass/project/project-pagination.scss */
+  #ProjectResultPiganation .pagination li a {
+    line-height: 14vw;
+    font-size: 5vw;
+  }
+
+  /* line 364, ../sass/project/project-pagination.scss */
+  #ProjectBrief {
+    margin-top: 6vw;
+  }
+  /* line 367, ../sass/project/project-pagination.scss */
+  #ProjectBrief p {
+    font-size: 4.4vw;
+    margin-bottom: 3vw;
+  }
+  /* line 372, ../sass/project/project-pagination.scss */
+  #ProjectBrief a {
+    height: 13vw;
+    line-height: 13vw;
+    font-size: 4vw;
+    padding: 0 8vw;
+    margin-bottom: 5vw;
+  }
+}
+/* line 1, ../sass/project/project-seo-text.scss */
+#ProjectSEO {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 25vw;
+  padding-top: 6.7vw;
+}
+/* line 10, ../sass/project/project-seo-text.scss */
+#ProjectSEO p {
+  position: relative;
+  overflow: hidden;
+  margin: 0 25%;
+  padding: 0 3%;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+/* line 21, ../sass/project/project-seo-text.scss */
+#ProjectSEO:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background: url(../imgNew/asteroid3.png) center center no-repeat;
+  background-size: 43%;
+  z-index: 1;
+  transform: rotate(-90deg);
+}
+/* line 35, ../sass/project/project-seo-text.scss */
+#ProjectSEO:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background: url(../imgNew/asteroid12.png) center center no-repeat;
+  background-size: 20%;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 750px) and (max-width: 999px) {
+  /* line 63, ../sass/project/project-seo-text.scss */
+  #ProjectSEO p {
+    padding: 0 2%;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 541px) and (max-width: 749px) {
+  /* line 75, ../sass/project/project-seo-text.scss */
+  #ProjectSEO p {
+    margin: 0 5%;
+    padding: 0 3%;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 540px) {
+  /* line 86, ../sass/project/project-seo-text.scss */
+  #ProjectSEO {
+    padding-top: 5vw;
+  }
+  /* line 89, ../sass/project/project-seo-text.scss */
+  #ProjectSEO p {
+    margin: 0 5vw;
+    padding: 0;
+    font-size: 4.4vw;
+    margin-bottom: 5vw;
+  }
+  /* line 96, ../sass/project/project-seo-text.scss */
+  #ProjectSEO:before {
+    display: none;
+  }
+  /* line 100, ../sass/project/project-seo-text.scss */
+  #ProjectSEO:after {
+    display: none;
+  }
+}
