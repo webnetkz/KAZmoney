@@ -12,7 +12,11 @@
             'Reply-To: info@webnet.kz' . "\r\n" .
             'X-Mailer: PHP/';
 
-        mail($to, $subject, $message, $headers);
+        $m = mail($to, $subject, $message, $headers);
+        
+        if($m) {
+            header('Location: https://webnet.kz/');
+        }    
 
         header('Location: https://webnet.kz/');
     }
