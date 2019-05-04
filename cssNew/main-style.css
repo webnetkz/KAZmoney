@@ -21,6 +21,12 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+img.logoFixed {
+  margin-top: 3%;
+  width: 30%;
+  height: 75%;
+}
+
 /* line 22, ../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;

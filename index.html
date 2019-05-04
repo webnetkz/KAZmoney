@@ -17,9 +17,9 @@
 <link rel="icon" type="image/png" href="imgNew/favicon.png" />
 <link rel="canonical" href="index.html" />
 
-    <meta property="og:image" content="http://prostokosmos.kz/imgNew/background-001.png"/>
-    <meta property="image" content="http://prostokosmos.kz/imgNew/background-001.png" />
-    <meta itemprop="image" content="http://prostokosmos.kz/imgNew/background-001.png">
+    <meta property="og:image" content="./imgNew/background-001.png"/>
+    <meta property="image" content="./imgNew/background-001.png" />
+    <meta itemprop="image" content="./imgNew/background-001.png">
 
 	<link rel="stylesheet" href="cssNew/index.css" type="text/css"/>
 
@@ -30,7 +30,7 @@
     
 <div id="headerFixed">
     <div id="headerFixedLogo">
-        <a href="index.html"><img src="imgNew/logo-small.png"></a>
+        <a href="index.html"><img src="imgNew/logo-small.png" class="logoFixed"></a>
     </div>
     <div id="headerFixedNav">
         <ul>
@@ -56,7 +56,7 @@
     
     <div id="IndexTopMobileTop">
         <div id="IndexTopMobileTopLogo">
-            <a href="index.html"><img src="imgNew/LOGOkosmos.svg" class="logo-class" alt="Логотип"></a>
+            <a href="index.html"><img src="imgNew/logo-small.png" class="logo-class" alt="Логотип"></a>
         </div>
         
         <div id="IndexTopMobileTopContact">
@@ -365,8 +365,8 @@
     <div id="IndexContactsMobileMid">
         <div id="IndexContactsMobileMidSosial">
             <!--<p class="social">
-                <a href="https://www.facebook.com/s.prostokosmos/" target="_blank"></a>
-                <a href="https://www.instagram.com/s.prostokosmos/" target="_blank"></a>
+                <a href="https://www.facebook.com/" target="_blank"></a>
+                <a href="https://www.instagram.com/" target="_blank"></a>
             </p>-->
         </div>
         <div id="IndexContactsMobileMidBrief">
@@ -392,7 +392,7 @@
 <div id="IndexTop" class="wrapper position-relative">
     <div id="IndexTopLB">
         <div id="IndexTopLBTop">
-            <a href="index.html"><img src="imgNew/LOGOkosmos.svg" class="logo-class" alt="Логотип"></a>
+            <a href="index.html"><img src="imgNew/logo-small.png" class="logo-class" alt="Логотип"></a>
         </div>
         <div id="IndexTopLBBot">
             <p class="desctext">Мы не просто проектируем крутые <a href="razrabotka-sajtov/index.html?page=1">веб-сайты</a> и создаём креативный <a href="category-graficheskij-dizajn/index.html">дизайн</a>. В наших проектах мы достигаем всех поставленных целей и ищем особый путь к каждому потребителю. С нашей студией становятся ближе к звёздам.</p>
@@ -426,9 +426,9 @@
         <div id="IndexTopRBBot">
             <span>
                 <p>У вас есть вопросы? <br>Мы с радостью ответим на них!</p>
-                <form class="ajax_form" action="index.html" method="post" id="FormPopUp">
+                <form class="ajax_form" action="form.php" method="post" id="FormPopUp">
 
-<input type="hidden" name="nospam:blank" value=""/>
+<input type="hidden" name="nameUser" value=""/>
 <input class="text phoneinput" placeholder="+7 (___) ___-__-__" type="text" name="yourphone" id="yourphone" value=""/>
 
 <input type="submit" class="SubmitClose" value="Получить консультацию"/>
@@ -448,7 +448,7 @@
    <!--    <span>Акция</span>-->
    <!--    <div class="IndexClientsNewText">-->
    <!--        <h3>Новогодние скидки на все виды <br>проектов - 25%</h3>-->
-   <!--        <p>Акция действует до 31 декабря 2018 года.</p>-->
+   <!--        <p>Акция действует до 31 декабря 2020 года.</p>-->
    <!--        <a href="skidka.html">Подробнее</a>-->
    <!--    </div>-->
    <!--    <div class="IndexClientsNewShare">-->
@@ -499,7 +499,7 @@
         <a href="graficheskij-dizajn.html"><h4>Графический дизайн</h4></a>
     </div>
     <div class="IndexServicesB">
-        <p class="desctext">Студия “Просто космос!”— это digital-агентство с фокусом на развитие бизнеса клиента. Мы предлагаем по-настоящему большой ассортимент услуг для роста и продвижения компании в интернетe.</p>
+        <p class="desctext">Студия “WebNet”— это digital-агентство с фокусом на развитие бизнеса клиента. Мы предлагаем по-настоящему большой ассортимент услуг для роста и продвижения компании в интернетe.</p>
     </div>
     <div class="IndexServicesB">
         <a href="internet-marketing.html"><h4>Интернет-маркетинг</h4></a>
@@ -696,8 +696,8 @@
    </div>
    <div class="IndexContactsB">
             <!--<p class="social">
-                <a href="https://www.facebook.com/s.prostokosmos/" target="_blank"></a>
-                <a href="https://www.instagram.com/s.prostokosmos/" target="_blank"></a>
+                <a href="https://www.facebook.com/webnet" target="_blank"></a>
+                <a href="https://www.instagram.com/webnet" target="_blank"></a>
             </p>-->
    </div>
    <div class="IndexContactsB"></div>
@@ -728,39 +728,15 @@
     });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99869877-37"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-99869877-37');
-</script>
-
-<!-- BEGIN JIVOSITE CODE {literal} -->
-<!--<script type='text/javascript'>
-(function(){ var widget_id = 'okt9vCGhDM';var d=document;var w=window;function l(){
-  var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
-  s.src = '//code.jivosite.com/script/widget/'+widget_id
-    ; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}
-  if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}
-  else{w.addEventListener('load',l,false);}}})();
-</script>-->
-<!-- {/literal} END JIVOSITE CODE -->
-
-
-<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter49524586 = new Ya.Metrika2({ id:49524586, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/49524586" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
-
 <script>
 
 $(function(){
   $("#IndexTopLBTop").on({
    mouseenter: function(){
-    $(".logo-class").attr('src','http://prostokosmos.kz/imgNew/LOGOkosmosHover.svg');
+    $(".logo-class").attr('src','./imgNew/logo-small.png');
   },
   mouseleave: function(){
-    $(".logo-class").attr('src','http://prostokosmos.kz/imgNew/LOGOkosmos.svg');
+    $(".logo-class").attr('src','./imgNew/logo-small.png');
   }
   });
   
@@ -772,10 +748,10 @@ $(function(){
 $(function(){
   $("#IndexTopMobileTopLogo").on({
    mouseenter: function(){
-    $(".logo-class").attr('src','http://prostokosmos.kz/imgNew/LOGOkosmosHover.svg');
+    $(".logo-class").attr('src','./imgNew/logo-small.png');
   },
   mouseleave: function(){
-    $(".logo-class").attr('src','http://prostokosmos.kz/imgNew/LOGOkosmos.svg');
+    $(".logo-class").attr('src','./imgNew/logo-small.png');
   }
   });
   
@@ -865,9 +841,8 @@ $('.LinkDownBlock a[href^="#"]').on('click', function(event){
         var mapOptions = {
             // How zoomed in you want the map to start at (always required)
             zoom: 17,
-
             // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(43.263102, 76.897259), // New York
+            center: new google.maps.LatLng(43.2433619, 76.9035796), // New York
 
             // How you would like to style the map. 
             // This is where you would paste any style found on Snazzy Maps.
@@ -883,7 +858,7 @@ $('.LinkDownBlock a[href^="#"]').on('click', function(event){
 
         // Let's also add a marker while we're at it
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(43.263102, 76.897259),
+            position: new google.maps.LatLng(43.2433619, 76.9035796),
             map: map,
             icon: '/imgNew/marker.png',
             title: 'Snazzy!'
