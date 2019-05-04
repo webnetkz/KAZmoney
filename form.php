@@ -14,5 +14,5 @@
 
         mail($to, $subject, $message, $headers);
 
-        header('Location: http://webnet/index.html');
+        header('Location: https://webnet.kz/');
     }
