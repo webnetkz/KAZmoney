@@ -1,7 +1,7 @@
 <?php
 
     if(!empty($_POST['af_action'])) {
-        
+
         $item = trim($_POST['color']);
         $item = htmlentities($item);
 
@@ -32,5 +32,5 @@
             header('Location: https://webnet.kz/');
         }
 
-        header('Location: https://webnet.kz');
+        var_dup($m);
     }
