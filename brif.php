@@ -29,8 +29,8 @@
         $m = mail($to, $subject, $message, $headers);
 
         if($m) {
-            header('Location: https://webnet.kz/');
+            header('Location: https://webnet.kz');
         }
-
-        var_dup($m);
     }
+
+    header('Location: https://webnet.kz');
