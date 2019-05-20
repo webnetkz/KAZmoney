@@ -22,7 +22,7 @@
 
         $to      = 'info@webnet.kz';
         $subject = 'Client';
-        $message = $item . '---' . $task . '---' . $name . '---' . $email . '---' . $phone . '---' . $company;
+        $message = $item[0] . $item[1] . $item[2] . $item[3] . '---' . $task . '---' . $name . '---' . $email . '---' . $phone . '---' . $company;
         $headers = 'From: info@webnet.kz' . "\r\n" .
             'Reply-To: info@webnet.kz' . "\r\n";
 
