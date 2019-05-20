@@ -16,6 +16,5 @@
         if($m) {
             header('Location: https://webnet.kz/');
         }    
-
-        header('Location: https://webnet.kz/');
     }
+    header('Location: https://webnet.kz/');
