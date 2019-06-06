@@ -99,7 +99,7 @@ AjaxForm.Message = {
                 sticky = false;
             }
             $.jGrowl(message, {theme: 'af-message-success', sticky: sticky});
-            document.location.replace('http://prostokosmos.kz/spasibo.html');
+            document.location.replace('http://webnet.kz/spasibo.html');
         }
     },
     error: function (message, sticky) {
