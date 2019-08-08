@@ -1,3 +1,7 @@
+div.hiddenForm {
+  display: none;
+}
+
 /* line 1, ../sass/index/index-top.scss */
 #IndexTopMobile {
   display: none;
