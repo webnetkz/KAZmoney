@@ -1,7 +1,6 @@
 <?php
 
     if(!empty($_POST['yourphone'])) {
-
         $phone = trim($_POST['yourphone']);
         $phone = htmlentities($phone);
 
