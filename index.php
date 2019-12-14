@@ -50,5 +50,7 @@
         imgPng[5].setAttribute('style', 'background-image: url("public/images/gifs/6.gif")');
       }
     </script>
+
+    
 </body>
 </html>
