@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body { 
+    background-color: rgb(23, 19, 27);
+    overflow-x: hidden;
+    cursor: url('../images/cursor.png'), default;
+}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.section1 {
+    background-image: url('../images/bg/1.png');
+}
+.section2 {
+    background-image: url('../images/bg/2.png');
+}
+.section3 {
+    background-image: url('../images/bg/3.png');
+}
+.section4 {
+    background-image: url('../images/bg/4.png');
+}
+.section5 {
+    background-image: url('../images/bg/5.png');
+}
+.section6 {
+    background-image: url('../images/bg/6.png');
+}
