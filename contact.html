@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="WebNet">
+
+    <link rel="icon" href="public/images/mini_logo.png" type="image/png">
+
+    <title>WebNet Разработка сайтов</title>
+
+    <script>
+      // Если ширина меньше 700 пикселей подключаем мобильные стили
+      var w = screen.width;
+      if(w < 700) {
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "public/styles/mstyle.css";
+        document.head.appendChild(link);
+      } else {
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "public/styles/style.css";
+        document.head.appendChild(link);
+      }
+    </script>
+
+</head>
+<body>
+    <header>
+        <a href="index" class="logo">
+          <img src="public/images/logo.png" alt="logotype WebNet">
+        </a>
+        <nav>
+          <a href="index" class="menuItem">Главная</a>
+          <a href="about" class="menuItem">О нас</a>
+          <a href="contact" class="menuItem">Контакты</a>
+        </nav>
+    </header>
+
+      <div class="section4 section"></div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.6556415494506!2d76.91117807510636!3d43.237679067607054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3883692d9f8f2147%3A0x285d7f198254b840!2sSmArt.Point!5e0!3m2!1sru!2skz!4v1576417971789!5m2!1sru!2skz" 
+        width="100%;" height="450" frameborder="0" style="border-top-right-radius: 120px; box-shadow: 2px -2px 10px rgb(255, 255, 255);" allowfullscreen=""></iframe>
+
+
+    <script>
+      // Смена png картинок на gif анимации, после прогрузки всех файлов
+      window.onload = function() {
+        var imgPng = document.querySelectorAll('.section');
+        imgPng[0].setAttribute('style', 'background-image: url("public/images/gifs/4.gif")');
+      }
+    </script>
+
+    
+</body>
+</html>

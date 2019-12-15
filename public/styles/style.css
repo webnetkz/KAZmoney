@@ -1,20 +1,59 @@
+@import 'animation.css';
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 html, body { 
-    background-color: rgb(23, 19, 27);
+    background-color: #17131b;
     overflow-x: hidden;
     cursor: url('../images/cursor.png'), default;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(255, 255, 255);
 }
-
+header {
+    position: fixed;
+    height: 100px;
+    width: 55vw;
+    background-color: rgba(33, 33, 33, 0.4);
+    border-bottom-right-radius: 90px;
+    box-shadow: 0 0 40px rgba(133, 133, 133, 0.1);
+    transition-duration: 700ms;
+    z-index: 20;
+}
+nav {
+    display: inline-block;
+    vertical-align: top;
+    height: 100px;
+    padding-top: 30px;
+    margin-left: 50px;
+}
+.menuItem {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 22px;
+    transition-duration: 500ms;
+}
+.logo {
+    display: inline-block;
+    height: 100px;
+}
+.logo > img {
+    height: 80px;
+    margin: 10px;
+    transition-duration: 600ms;
+}
 .section {
     height: 100vh;
     width: 100vw;
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;
+    transition-duration: 1s;
+    animation: showSection 700ms linear;
 }
 .section1 {
     background-image: url('../images/bg/1.png');

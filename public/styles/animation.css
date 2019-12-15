@@ -1,0 +1,41 @@
+@keyframes showSection {
+    0% {
+        margin-left: 100vw;
+        transform: scale(0.5);
+    }
+    50% {
+        margin-left: -15vw;
+    }
+    100% {
+        transform: scale(1);
+        margin-left: 0;
+    }
+}
+header:hover {
+    border-bottom-right-radius: 0;
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.1);
+    width: 100vw;
+}
+.logo > img:hover {
+    transform: translateX(20px) scale(1.2);
+}
+.menuItem:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgb(55, 45, 200);
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(222, 222, 222, 1);
+    animation: hoverMenuItem 1s infinite;
+}
+@keyframes hoverMenuItem {
+    0% {
+        box-shadow: 0 0 30px rgba(222, 222, 222, 1);
+        box-shadow: 0 10px 30px rgba(222, 222, 222, 1);
+        box-shadow: 0 -10px 30px rgba(222, 222, 222, 1);
+        box-shadow: 10px 0 30px rgba(222, 222, 222, 1);
+        box-shadow: -10px 0 30px rgba(222, 222, 222, 1);
+        border-bottom: 5px solid rgb(55, 45, 200);
+    }
+    50%{
+        color: rgb(223, 221, 246);
+    }
+}
