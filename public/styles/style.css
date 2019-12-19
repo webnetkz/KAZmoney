@@ -14,7 +14,7 @@ html, body {
 }
 header {
     position: fixed;
-    height: 100px;
+    height: 50px;
     width: 55vw;
     background-color: rgba(33, 33, 33, 0.4);
     border-bottom-right-radius: 90px;
@@ -25,25 +25,25 @@ header {
 nav {
     display: inline-block;
     vertical-align: top;
-    height: 100px;
-    padding-top: 30px;
+    height: 50px;
+    padding-top: 15px;
     margin-left: 50px;
 }
 .menuItem {
     box-sizing: border-box;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 1.5em;
-    padding: 22px;
+    font-size: 1.1em;
+    padding: 12px;
     transition-duration: 500ms;
 }
 .logo {
     display: inline-block;
-    height: 100px;
+    height: 40px;
 }
 .logo > img {
-    height: 80px;
-    margin: 10px;
+    height: 40px;
+    margin: 5px;
     transition-duration: 600ms;
 }
 .section {

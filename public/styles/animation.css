@@ -17,7 +17,8 @@ header:hover {
     width: 100vw;
 }
 .logo > img:hover {
-    transform: translateX(20px) scale(1.2);
+    transform: scale(1.4);
+    margin: 20px 20px;
 }
 .menuItem:hover {
     background-color: rgba(255, 255, 255, 1);
