@@ -3,6 +3,5 @@ AddDefaultCharset UTF-8
 # Запуск движка
 RewriteEngine on
 # Убераем у файлов расширение .php при помощи регулярного выржения
-RewriteRule ^([^.?]+)$ %{REQUEST_URI}.html [L]
-RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.html[? ].*$"
-RewriteRule .* - [L,R=404]
+RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
