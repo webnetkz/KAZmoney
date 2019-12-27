@@ -1,0 +1,53 @@
+.headerMenu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+menu {
+    position: relative;
+    transition-duration: 500ms;
+    background-color: rgb(51, 60, 78);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    height: 70vh;
+}
+#closeMenu {
+    position: relative;
+    height: 40vh;
+    background-color: rgba(5, 5, 5, 0.1);
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    transition-duration: 500ms;
+}
+.visibleCloseMenu {
+    top: -10vh;
+}
+.hiddenCloseMenu {
+    top: 100%;
+}
+.closeIcon {
+    font-size: 15em;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 12px rgba(5, 5, 5, 1);
+}
+.visibleMenu {
+    position: relative;
+    top: 0;
+}
+.hiddenMenu {
+    position: relative;
+    top: -100vh;
+}
+menu > ul {
+    padding-top: 4em;
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+    background-color: rgba(5, 5, 5, 0.1);
+    box-shadow: 0 0 10px rgba(5, 5, 5, 1);
+} 
+.menuItem {
+    list-style: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.4em;
+    padding-bottom: 5px;
+    border-bottom: 1px outset rgb(51, 60, 78);
+}

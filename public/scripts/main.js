@@ -1,12 +1,19 @@
 // Подключение необходимых стилей
-var w = screen.width;
+let w = screen.width;
 if(w < 700) {
-  var link = document.createElement("link");
+  let link = document.createElement("link");
+  let menu = document.createElement("link");
+  
   link.rel = "stylesheet";
   link.href = "public/styles/mobile/style.css";
+  
+  menu.rel = "stylesheet";
+  menu.href = "public/styles/mobile/menu.css";
+  
   document.head.appendChild(link);
+  document.head.appendChild(menu);
 } else {
-  var link = document.createElement("link");
+  let link = document.createElement("link");
   link.rel = "stylesheet";
   link.href = "public/styles/desktop/style.css";
   document.head.appendChild(link);

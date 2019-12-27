@@ -25,8 +25,8 @@
     <script src="public/scripts/main.js"></script>
 </head>
 <body>
-    <button class="btn btnMenu" onclick="handlerMenu();">Меню</button>
-    <header>
+    <button class="btnMenu" onclick="handlerMenu();">Меню</button>
+    <header class="headerMenu">
         <menu class="hiddenMenu">
             <ul>
                 <a href="index" class="linkNS">
@@ -46,5 +46,7 @@
                 </a>
             </ul>
         </menu>
-        <div id="closeMenu" class="hiddenCloseMenu"  onclick="handlerMenu();"></div>
+        <div id="closeMenu" class="hiddenCloseMenu"  onclick="handlerMenu();">
+            <span class="closeIcon">&times;</span>
+        </div>
     </header>
