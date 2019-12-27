@@ -11,7 +11,6 @@ self.addEventListener('install', function(e) {
        'public/styles/allStyle.css',
        'public/styles/desktop/style.css',
        'public/styles/mobile/style.css',
-       'public/scripts/libs.js',
        'public/scripts/main.js'
      ]);
    })
