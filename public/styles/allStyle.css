@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: sans-serif;
+}
+.linkNS {
+    text-decoration: none;
+    border: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html {
+    font-family: 'Oswald', sans-serif;
+    font-style: sans-serif;
+}
+body {
+    position: relative;
+    background-color: rgb(28, 38, 58);
+    text-align: center;
+    overflow-x: hidden;
+    animation: showContent 400ms linear;
+}
+@keyframes showContent {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+
+}

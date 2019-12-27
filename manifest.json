@@ -1,8 +1,8 @@
 {
-  "short_name": "newPWA",
-  "name": "new Progressive Web Application",
+  "short_name": "WebNet",
+  "name": "WebNet",
   "start_url": "/",
-  "background_color": "rgb(219, 250, 222)",
+  "background_color": "rgb(255, 255, 255)",
   "theme_color": "rgb(88, 139, 221)",
   "display": "fullscreen",
   "prefer_related_applications": false,

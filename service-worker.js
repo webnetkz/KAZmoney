@@ -8,6 +8,7 @@ self.addEventListener('install', function(e) {
        'manifest.json',
        'public/images/mini_logo.png',
        'public/images/logo.png',
+       'public/styles/allStyle.css',
        'public/styles/desktop/style.css',
        'public/styles/mobile/style.css',
        'public/scripts/libs.js',
