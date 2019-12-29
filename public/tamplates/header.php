@@ -28,25 +28,29 @@
     <button class="btnMenu" onclick="handlerMenu();">Меню</button>
     <header class="headerMenu">
         <menu class="hiddenMenu">
-            <ul>
-                <a href="index" class="linkNS">
-                    <li class="menuItem">Главная</li>
+            <nav>
+                <a href="index" class="linkNS menuItem">
+                <img src="public/images/logo.png" alt="logotype webnet" class="logoMenu">
+                    Главная
                 </a>
-                <a href="about" class="linkNS">
-                    <li class="menuItem">О нас</li>
+                <a href="about" class="linkNS menuItem">
+                    О нас
                 </a>
-                <a href="marketing" class="linkNS">
-                    <li class="menuItem">Маркетинг</li>
+                <a href="marketing" class="linkNS menuItem">
+                    Маркетинг
                 </a>
-                <a href="portfolio" class="linkNS">
-                    <li class="menuItem">Портфолио</li>
+                <a href="portfolio" class="linkNS menuItem">
+                    Портфолио
                 </a>
-                <a href="contact" class="linkNS">
-                    <li class="menuItem">Контакты</li>
+                <a href="contact" class="linkNS menuItem">
+                    Контакты
                 </a>
-            </ul>
+            </nav>
         </menu>
         <div id="closeMenu" class="hiddenCloseMenu"  onclick="handlerMenu();">
             <span class="closeIcon">&times;</span>
         </div>
+        <p class="phoneHeader">
+            <a href="tel:+77076691424" class="phone">8 (707) 669 14 24</a>
+        </p>
     </header>

@@ -3,6 +3,7 @@
     src: url('../fonts/Oswald-VariableFont_wght.ttf');
     font-weight: normal;
     font-style: sans-serif;
+    font-display: swap;
 }
 .linkNS {
     text-decoration: none;

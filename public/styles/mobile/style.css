@@ -1,3 +1,14 @@
 #content {
     padding-top: 50px;
+    color: rgb(255, 255, 255);
+}
+.phoneHeader {
+    position: fixed;
+    top: 5px;
+    left: 30vh;
+}
+.phone {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.4em;
 }

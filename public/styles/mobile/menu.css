@@ -2,6 +2,7 @@
     position: fixed;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 menu {
     position: relative;
@@ -36,18 +37,76 @@ menu {
     position: relative;
     top: -100vh;
 }
-menu > ul {
+menu > nav {
     padding-top: 4em;
     height: 100%;
     width: 80%;
     margin-left: 10%;
     background-color: rgba(5, 5, 5, 0.1);
     box-shadow: 0 0 10px rgba(5, 5, 5, 1);
-} 
+    animation: navMenu 1800ms infinite;
+}
+@keyframes navMenu {
+    0% {
+        box-shadow: 0 0 10px rgba(5, 5, 5, 1);
+    }
+    10% {
+        box-shadow: 0 0 12px rgba(5, 5, 5, 1);
+    }
+    25% {
+        box-shadow: 0 0 15px rgba(5, 5, 5, 1);
+    }
+    35% {
+        box-shadow: 0 0 17px rgba(5, 5, 5, 1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(5, 5, 5, 1);
+    }
+    65% {
+        box-shadow: 0 0 17px rgba(5, 5, 5, 1);
+    }
+    75% {
+        box-shadow: 0 0 15px rgba(5, 5, 5, 1);
+    }
+    85% {
+        box-shadow: 0 0 12px rgba(5, 5, 5, 1);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(5, 5, 5, 1);
+    }
+}
 .menuItem {
-    list-style: none;
+    display: block;
     color: rgb(255, 255, 255);
     font-size: 1.4em;
     padding-bottom: 5px;
     border-bottom: 1px outset rgb(51, 60, 78);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(5, 5, 5, 1);
+    animation: menuItem 6000ms infinite;
+}
+@keyframes menuItem {
+    0% {
+        border-radius: 0px;
+    }
+    10% {
+        border-radius: 5px;
+    }
+    30% {
+        border-radius: 10px;
+    }
+    50% {
+        border-radius: 15px;
+    }
+    70% {
+        border-radius: 10px;
+    }
+    100% {
+        border-radius: 0px;
+    }
+}
+.logoMenu {
+    margin: 10px auto;
+    display: block;
+    height: 4em;
 }
