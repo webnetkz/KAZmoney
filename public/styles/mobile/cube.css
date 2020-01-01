@@ -1,0 +1,84 @@
+.containerCube {
+    position: relative;
+    margin: 100px auto;
+    height: 200px;
+    width: 200px;
+    perspective: 500px;
+}
+.cube {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    animation: spinCube 5000ms infinite;
+    transform: rotate3d(1, 1, 1, 44deg);
+}
+.cubeImg {
+    height: 100px;
+    margin-top: 50px;
+}
+.side {
+    position: absolute;
+    z-index: 0;
+    width: inherit;
+    height: inherit;
+    border: 3px solid rgb(255, 255, 255);
+    line-height: 200px;
+    text-align: center;
+    animation: borderCube 3000ms infinite;
+    background-color: rgba(220, 220, 220, 0.3);
+}
+.front {
+    transform: translateZ(100px);
+}
+.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+@keyframes spinCube {
+    0% {
+        transform: rotate3d(1, 1, 1, 44deg);
+    }
+    50% {
+        transform: rotate3d(1, 1, 1, 184deg);
+    }
+    60% {
+        transform: rotate3d(3, 2, 1, 184deg);
+    }
+    70% {
+        transform: rotate3d(2, 5, 2, 184deg);
+    }
+    90% {
+        transform: rotate3d(1, 1, 1, 44deg);
+    }
+}
+@keyframes borderCube {
+    0% {
+        border: 3px solid rgb(255, 252, 252);
+    }
+    50% {
+        border: 3px solid rgb(110, 16, 16);
+        background-color: rgba(22, 22, 22, 0.1);
+    }
+    60% {
+        border: 3px solid rgb(70, 38, 177);
+    }
+    70% {
+        border: 3px solid rgb(219, 36, 36);
+        box-shadow: 0 0 30px rgb(255, 255, 255);
+    }
+    90% {
+        border: 3px solid rgb(141, 231, 57);
+        transform: translateZ(20px);
+    }
+}

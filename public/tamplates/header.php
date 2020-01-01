@@ -30,7 +30,7 @@
         <menu class="hiddenMenu">
             <nav>
                 <a href="index" class="linkNS menuItem">
-                <img src="public/images/logo.png" alt="logotype webnet" class="logoMenu">
+                <img src="public/images/logo.webp" alt="logotype webnet" class="logoMenu">
                     Главная
                 </a>
                 <a href="about" class="linkNS menuItem">
