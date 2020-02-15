@@ -1,4 +1,5 @@
 <?php
+  
 
     // Подключение переменых
     require_once 'app/models/index.php';
