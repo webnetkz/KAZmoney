@@ -12,7 +12,7 @@
         <meta name="robots" content="index, follow">
 
         <link rel="shortcut icon" href="./public/img/icon.png" type="image/png">
-        <link rel="apple-touch-icon" href="./public/img/logo.png">
+        <link rel="apple-touch-icon" href="/public/img/logo.png">
         <link rel="stylesheet" type="text/css" href="./public/css/style.css">
         <link rel="stylesheet" href="./public/css/mobileStyle.css">
         <link rel="manifest" href="./public/json/manifest.json"> 
@@ -40,75 +40,12 @@
       </div>
 
       <script>
-
-        let firstStart = false;
-
-        document.querySelector('#startBtn').addEventListener('click', () => {
-          let startBtn = document.querySelector('#startBtn');
-          if(startBtn.querySelector('p').textContent == 'START') {
-            startBtn.querySelector('p').textContent = 'STOP';
-            if(firstStart == false) {
-              startTimer();
-              firstStart = true;
-            }
-          } else {
-            stopTimer();
-          }
-        });
-
-        let minutes = document.querySelector('.minutes');
-        let seconds = document.querySelector('.seconds');
-        let miliseconds = document.querySelector('.miliseconds');
-
-        function stopTimer() {
-          let newRes = document.createElement('div');
-          newRes.classList.add('res');
-          newRes.textContent = document.querySelector('.timer').textContent;
-          document.querySelector('#results').appendChild(newRes); 
-        }
-
-        function startTimer() {
-          setInterval(() => {
-            for(let dash of document.querySelectorAll('.dashes')) {
-              if(dash.style.color == 'rgb(32, 32, 35)') {
-                dash.style.color = 'white';
-              } else {
-                dash.style.color = 'rgb(32, 32, 35)';
-              }
-            }
-          }, 500);
-
-          setInterval(() => {
-            seconds.textContent = Number(seconds.textContent) + 1;
-            if(Number(seconds.textContent) < 10) {
-              seconds.textContent = '0'+Number(seconds.textContent)
-            }
-            if(Number(seconds.textContent) == 60) {
-              seconds.textContent = 00;
-              minutes.textContent = Number(minutes.textContent) + 1;
-            }
-            if(Number(minutes.textContent) < 10) {
-              minutes.textContent = '0'+Number(minutes.textContent)
-            }
-          }, 1000);
-
-          setInterval(() => {
-            miliseconds.textContent = Number(miliseconds.textContent) + 1;
-            if(Number(miliseconds.textContent) == 10) {
-              miliseconds.textContent = 0;
-            }
-          },100);
-        }
-
-      </script>
-
-      <script>
         // Проверка браузера на поддержку service worker
        if('serviceWorker' in navigator) {
            // Подключаем sw
-           navigator.serviceWorker.register('/sw.js').then(function() {
+           //navigator.serviceWorker.register('./sw.js').then(function() {
                console.log("Service Worker Registered");
-           });
+           //});
        }
     </script>
     <script src="./public/js/main.js" type="module"></script>
