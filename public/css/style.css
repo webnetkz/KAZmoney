@@ -6,6 +6,7 @@
   --whiteColor: rgb(255, 255, 255);
   --redColor: rgb(255, 0, 0);
   --bgColor: #202023;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html, body {
   font-family: sans-serif;
@@ -49,6 +50,11 @@ html, body {
 #startBtn:hover {
   cursor: pointer;
   transform: scale(1.1);
+  box-shadow: 0 0 30px #ff6600;
+}
+
+#startBtn p {
+  user-select: none;
 }
 #results {
   position: fixed;
