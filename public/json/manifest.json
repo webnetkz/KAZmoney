@@ -1,0 +1,17 @@
+{
+    "short_name": "stopwatch",
+    "name": "stopwatch",
+    "icons": [
+      {
+       "src":"/public/img/logo.png",
+       "sizes": "512x512",
+       "type": "image/png",
+       "purpose": "any maskable"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#202023",
+    "theme_color": "#ff6600",
+    "display": "fullscreen",
+    "prefer_related_applications": false
+  }
