@@ -9,7 +9,7 @@ html, body {
   background-color: var(--bgColor);
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Bakbak One', cursive;
   color: var(--whiteColor);
   transition-duration: 500ms;
 }
@@ -24,8 +24,14 @@ html, body {
   box-sizing: border-box;
 }
 .timer > span {
-  font-size: 3rem;
+  position: relative;
+  font-size: 5rem;
+  padding-left: 20px;
 }
+.miliseconds {
+  font-family: monospace;
+}
+
 .dashes {
   margin: -20px;
 }
@@ -63,6 +69,7 @@ html, body {
 }
 .res {
   padding: 4px;
+  font-size: 1.5rem;
   text-align: center;
 }
 
