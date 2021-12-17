@@ -9,7 +9,6 @@ html, body {
   background-color: var(--bgColor);
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-family: 'Bakbak One', cursive;
   color: var(--whiteColor);
   transition-duration: 500ms;
 }
