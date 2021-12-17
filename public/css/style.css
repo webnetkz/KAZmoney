@@ -54,6 +54,7 @@ html, body {
 }
 
 #startBtn p {
+  color: var(--bgColor);
   user-select: none;
 }
 #results {
