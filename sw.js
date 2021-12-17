@@ -5,7 +5,11 @@ self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('title').then(function(cache) {
      return cache.addAll([
-       '/',
+       '/index.html',
+       '/public/audio/click.mp3',
+       '/public/css/style.css',
+       '/public/js/main.js',
+       '/public/img/icons/reset.png',
      ]);
    })
  );

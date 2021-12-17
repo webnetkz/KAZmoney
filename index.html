@@ -44,9 +44,9 @@
         // Проверка браузера на поддержку service worker
        if('serviceWorker' in navigator) {
            // Подключаем sw
-           //navigator.serviceWorker.register('./sw.js').then(function() {
+           navigator.serviceWorker.register('./sw.js').then(function() {
                console.log("Service Worker Registered");
-           //});
+           });
        }
     </script>
   </body>
