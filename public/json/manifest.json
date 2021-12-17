@@ -1,14 +1,6 @@
 {
-    "short_name": "title",
-    "name": "title",
-    "icons": [
-      {
-        "src": "/public/img/miniLogo.png",
-        "sizes": "192x192",
-        "type": "image/png",
-        "purpose": "any maskable"
-      }
-    ],
+    "short_name": "stopwatch",
+    "name": "stopwatch",
     "icons": [
       {
        "src":"/public/img/logo.png",

@@ -3,8 +3,16 @@ import { parallaxScroll } from './moduls/parallaxScroll.js';
 import { showVisible } from './moduls/showOnScroll.js';
 
 
-window.addEventListener('scroll', () => {
+// window.addEventListener('scroll', () => {
 
+// });
+
+let startBtn = document.querySelector('#startBtn');
+startBtn.addEventListener('click', () => {
+  let audio = new Audio();
+  audio.preload = 'auto';
+  audio.src = '../public/audio/click.mp3';
+  audio.play();
 });
 
 let firstStart = false;
