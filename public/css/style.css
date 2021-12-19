@@ -73,19 +73,44 @@ html, body {
   text-align: center;
 }
 
-.reset {
+.reset, .settings, .whiteBg {
   position: fixed;
   width: 32px;
-  bottom: 5vh;
-  left: calc((100vw - 50vw) + (15vh / 2) + 3vw);
   padding: 4px;
   border: 1px solid #658DFF;
   border-radius: 40px;
   transition-duration: 500ms;
 }
-.reset:hover {
+.reset {
+  bottom: 5vh;
+  left: calc((100vw - 50vw) + (15vh / 2) + 3vw);
+}
+.reset:hover, .settings:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-
+.settings {
+  bottom: 5vh;
+  left: calc((100vw - 50vw) - 30vw);
+}
+.navSettings {
+  transition-duration: 600ms;
+  position: fixed;
+  top: 0;
+  left: -40vw;
+  height: 100vh;
+  width: 80vw;
+  background-color: var(--bgColor);
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.mute {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  padding: 15px;
+  border-radius: 100px;
+  top: 30vh;
+  left: calc(80vw - 40vw - (128px / 2))
+}
 

@@ -3,7 +3,7 @@
     "name": "stopwatch",
     "icons": [
       {
-       "src":"/public/img/logo.png",
+       "src":"/public/img/logos/512.png",
        "sizes": "512x512",
        "type": "image/png",
        "purpose": "any maskable"

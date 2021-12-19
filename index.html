@@ -11,14 +11,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
 
-        <link rel="shortcut icon" href="./public/img/icon.png" type="image/png">
-        <link rel="apple-touch-icon" href="./public/img/logo.png">
+        <link rel="shortcut icon" href="./public/img/logos/64.png" type="image/png">
+        <link rel="apple-touch-icon" href="./public/img/logos/512.png">
         <link rel="stylesheet" type="text/css" href="./public/css/style.css">
         <!-- <link rel="stylesheet" href="./public/css/mobileStyle.css"> -->
         <link rel="manifest" href="./public/json/manifest.json"> 
       </head>
 
     <body>
+
+      <div class="navSettings" style="left: -100vw;">
+        <img src="./public/img/icons/mute.png" onclick="whiteBg();" alt="bg value" class="whiteBg">
+      </div>
 
       <div id="results"></div>
 
@@ -32,7 +36,10 @@
         </div>
       </div>
 
-      <div id="startBtn">
+      <div id="settings" onclick="showMenu();">
+        <img src="./public/img/icons/settings.png" class="settings" alt="settings application">
+      </div>
+      <div id="startBtn" onclick="signal();">
         <p>START</p>
       </div>
       <div id="reset" onclick="window.location.href = 'index.html'">
@@ -41,15 +48,27 @@
       
       <!-- <script src="./public/js/main.js" type="module"></script> -->
       <script>
-        let startBtn = document.querySelector('#startBtn');
-        startBtn.addEventListener('click', () => {
-          let audio = new Audio();
-          audio.preload = 'auto';
-          audio.src = '../public/audio/click.mp3';
-          audio.play();
-        });
 
         let firstStart = false;
+        let startBtn = document.querySelector('#startBtn');
+        let minutes = document.querySelector('.minutes');
+        let seconds = document.querySelector('.seconds');
+        let miliseconds = document.querySelector('.miliseconds');
+
+        function showMenu() {
+          if(document.querySelector('.navSettings').style.left == '-100vw') {
+            document.querySelector('.navSettings').style.left = '0px';
+          }
+        }
+
+        function signal() {
+          startBtn.addEventListener('click', () => {
+            let audio = new Audio();
+            audio.preload = 'auto';
+            audio.src = '../public/audio/click.mp3';
+            audio.play();
+          });
+        }
 
         document.querySelector('#startBtn').addEventListener('click', () => {
           let startBtn = document.querySelector('#startBtn');
@@ -63,10 +82,6 @@
             stopTimer();
           }
         });
-
-        let minutes = document.querySelector('.minutes');
-        let seconds = document.querySelector('.seconds');
-        let miliseconds = document.querySelector('.miliseconds');
 
         function stopTimer() {
           let newRes = document.createElement('div');
