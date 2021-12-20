@@ -72,7 +72,11 @@
           } else {
             btn.removeAttribute('onclick');
             btn.setAttribute('onclick', 'whiteTheme(true);');
-            alert(123);
+            document.querySelector('html').style.background = '#202023';
+            document.querySelector('.navSettings').style.background = '#202023';
+            document.querySelector('.btn').style.background = '#202023';
+            document.body.style.color = 'white';
+            document.querySelector('#results').style.color = 'white';
           }
         }
 
