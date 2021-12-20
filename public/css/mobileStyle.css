@@ -1,6 +1,3 @@
 @media only screen and (max-width: 1280px) {
-    .settings {
-        bottom: 5vh;
-        left: calc((100vw - 50vw) - 30vw);
-    }
+
 }
