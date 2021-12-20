@@ -1,8 +1,13 @@
-* {
+:root {
   --whiteColor: rgb(255, 255, 255);
   --redColor: rgb(255, 0, 0);
   --bgColor: #202023;
+  --mainColor: #658DFF;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+* {
+  margin: 0;
+  padding: 0;
 }
 html, body {
   font-family: sans-serif;
@@ -73,11 +78,11 @@ html, body {
   text-align: center;
 }
 
-.reset, .settings, .whiteBg {
+.reset, .settings, .closeNav {
   position: fixed;
   width: 32px;
   padding: 4px;
-  border: 1px solid #658DFF;
+  border: 1px solid var(--mainColor);
   border-radius: 40px;
   transition-duration: 500ms;
 }
@@ -85,32 +90,47 @@ html, body {
   bottom: 5vh;
   left: calc((100vw - 50vw) + (15vh / 2) + 3vw);
 }
-.reset:hover, .settings:hover {
+.reset:hover, .settings:hover, .closeNav:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 .settings {
   bottom: 5vh;
-  left: calc((100vw - 50vw) - 30vw);
+  left: calc((100vw - 50vw) - 7.5vw - 3vw);
 }
 .navSettings {
   transition-duration: 600ms;
   position: fixed;
   top: 0;
-  left: -40vw;
+  left: -100vw;
   height: 100vh;
   width: 80vw;
   background-color: var(--bgColor);
   z-index: 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.mute {
+.navSettings > div {
+  text-align: center;
+  margin-top: 2rem;
+}
+.closeNav {
   position: relative;
-  width: 128px;
-  height: 128px;
-  padding: 15px;
-  border-radius: 100px;
-  top: 30vh;
-  left: calc(80vw - 40vw - (128px / 2))
+  right: -76vw;
+  top: 10px;
+}
+.btn {
+  color: var(--mainColor);
+  padding: 5px;
+  color: var(--mainColor);
+  background: var(--bgColor);
+  border: 1px solid var(--mainColor);
+  font-size: 1.5rem;
+  border-radius: 5px;
+  transition-duration: 500ms;
+}
+.btn:hover {
+  background-color: var(--mainColor);
+  color: var(--bgColor);
+  cursor: pointer;
 }
 

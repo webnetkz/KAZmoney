@@ -21,7 +21,11 @@
     <body>
 
       <div class="navSettings" style="left: -100vw;">
-        <img src="./public/img/icons/mute.png" onclick="whiteBg();" alt="bg value" class="whiteBg">
+        <img src="./public/img/icons/close.png" class="closeNav" alt="close button" onclick="showMenu();">
+
+        <div>
+          <button class="btn" id="white" onclick="whiteTheme(true);">Светлый фон</button>
+        </div>
       </div>
 
       <div id="results"></div>
@@ -55,9 +59,28 @@
         let seconds = document.querySelector('.seconds');
         let miliseconds = document.querySelector('.miliseconds');
 
+        function whiteTheme(status) {
+          let btn = document.querySelector('#white');
+          if(status == true) {
+            btn.removeAttribute('onclick');
+            btn.setAttribute('onclick', 'whiteTheme(false);');
+            document.querySelector('html').style.background = 'white';
+            document.querySelector('.navSettings').style.background = 'white';
+            document.querySelector('.btn').style.background = 'white';
+            document.body.style.color = 'black';
+            document.querySelector('#results').style.color = 'black';
+          } else {
+            btn.removeAttribute('onclick');
+            btn.setAttribute('onclick', 'whiteTheme(true);');
+            alert(123);
+          }
+        }
+
         function showMenu() {
           if(document.querySelector('.navSettings').style.left == '-100vw') {
             document.querySelector('.navSettings').style.left = '0px';
+          } else {
+            document.querySelector('.navSettings').style.left = '-100vw';
           }
         }
 
