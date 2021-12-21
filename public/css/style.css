@@ -13,7 +13,7 @@ html, body {
   font-family: sans-serif;
   background-color: var(--bgColor);
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: hidden; 
   color: var(--whiteColor);
   transition-duration: 500ms;
 }
@@ -39,15 +39,22 @@ html, body {
 .dashes {
   margin: -20px;
 }
-#startBtn {
+#allBtns {
   position: fixed;
+  bottom: 5vh;
   display: flex;
+  justify-content: center;
+  width: 100vw;
+  align-items: flex-end;
+}
+#startBtn {
+  position: relative;
+  display: flex;
+  margin: 1px 30px;
   justify-content: center;
   align-items: center;
   height: 15vh;
   width: 15vh;
-  left: calc((100vw - 50vw) - (15vh / 2));
-  bottom: 5vh;
   background-color: #ff6600;
   border-radius: 10vh;
   transition-duration: 500ms;
@@ -70,7 +77,7 @@ html, body {
   top: 5px;
   width: 100vw;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .res {
   padding: 4px;
@@ -79,7 +86,7 @@ html, body {
 }
 
 .reset, .settings, .closeNav {
-  position: fixed;
+  position: relative;
   width: 32px;
   padding: 4px;
   border: 1px solid var(--mainColor);
@@ -88,7 +95,6 @@ html, body {
 }
 .reset {
   bottom: 5vh;
-  left: calc((100vw - 50vw) + (15vh / 2) + 3vw);
 }
 .reset:hover, .settings:hover, .closeNav:hover {
   cursor: pointer;
@@ -96,7 +102,6 @@ html, body {
 }
 .settings {
   bottom: 5vh;
-  left: calc((100vw - 50vw) - 7.5vw - 3vw);
 }
 .navSettings {
   transition-duration: 600ms;
