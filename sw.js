@@ -10,6 +10,7 @@ self.addEventListener('install', function(e) {
        '/public/css/style.css',
        '/public/js/main.js',
        '/public/img/icons/reset.png',
+       '/public/img/icons/settings.png',
      ]);
    })
  );
