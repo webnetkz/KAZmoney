@@ -1,17 +1,21 @@
 {
-    "short_name": "stopwatch",
-    "name": "stopwatch",
-    "icons": [
-      {
-       "src":"/public/img/logos/512.png",
-       "sizes": "512x512",
-       "type": "image/png",
-       "purpose": "any maskable"
-      }
-    ],
-    "start_url": "/",
-    "background_color": "#202023",
-    "theme_color": "#ff6600",
-    "display": "fullscreen",
-    "prefer_related_applications": false
-  }
+  "short_name": "Stopwatch",
+  "name": "Stopwatch",
+  "description": "Stopwatch просто и удобный секундомер!",
+  "lang": "ru (Russian)",
+  "orientation": "any",
+  "categories": ["web", "business", "stopwatch"],
+  "icons": [
+    {
+      "src":"/public/img/logos/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#202023",
+  "theme_color": "#ff6600",
+  "display": "fullscreen",
+  "prefer_related_applications": false
+}
