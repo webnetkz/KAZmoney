@@ -1,6 +1,7 @@
 {
-  "short_name": "Stopwatch",
-  "name": "Stopwatch",
+  "short_name": "Web-stopwatch",
+  "name": "Web-stopwatch",
+  "version": "1.1.0",
   "description": "Stopwatch просто и удобный секундомер!",
   "lang": "ru (Russian)",
   "orientation": "any",
@@ -13,7 +14,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/",
   "background_color": "#202023",
   "theme_color": "#ff6600",
   "display": "fullscreen",
