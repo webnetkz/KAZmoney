@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 </head>
 <body>
     
@@ -18,13 +24,132 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
+      class MainButton extends React.Component
+      {
+        render()
+        {
+          var MainButtonStyles = {
+            color: "white",
+            width: "150px",
+            height: "40px",
+            padding: "5px 15px",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            margin: "5px auto",
+            borderRadius: "7px",
+            fontFamily: "sans-serif",
+            fontSize: "2rem",
+            color: "#8AB4F7",
+          }
 
-        let mainContainer = document.querySelector("#mainContainer");
+          return (
+            <div style={MainButtonStyles}>
+              {this.props.children}
+            </div>
+          );
+        }
+      }
 
-        ReactDOM.render(
-            <h1>Go!</h1>,
-            mainContainer
-        );
+      class MainInput extends React.Component
+      {
+        render()
+        {
+          var MainInputStyles = {
+            color: "white",
+            display: "block",
+            width: "80%",
+            height: "40px",
+            padding: "5px 15px",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            margin: "10px auto",
+            borderRadius: "7px",
+            fontFamily: "sans-serif",
+            fontSize: "2rem",
+            color: "#8AB4F7",
+            outline: "none",
+          }
+
+          return (
+            <input style={MainInputStyles}></input>
+          );
+        }
+      }
+    </script>
+  
+    <script type="text/babel">
+      class ModalWindow extends React.Component
+      {
+        render()
+        {
+          var ModalWindowStyles = {
+            color: "white",
+            backgroundColor: "#292A2D",
+            height: "40vh",
+            position: "absolute",
+            zIndex: "99",
+            width: "96vw",
+            top: 0,
+            left: "2vw",
+            borderBottomLeftRadius: "22px",
+            borderBottomRightRadius: "22px",
+            boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+            padding: "30px",
+            boxSizing: "border-box"
+          }
+
+          return (
+            <div style={ModalWindowStyles}>
+              {this.props.children}
+            </div>
+          );
+        }
+      }
+    </script>
+
+    <script type="text/babel">
+
+      let mainContainer = document.querySelector("#mainContainer");
+
+      class MainContainer extends React.Component
+      {
+        render()
+        {
+          var mainContainerStyles = {
+            position: "relative",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "#202124",
+            paddingTop: "10px"
+          }
+
+          return (
+            <div style={mainContainerStyles}>
+              {this.props.children}
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <MainContainer>
+          <MainButton>
+            Приход +
+          </MainButton>
+          <MainButton>
+            Расход -
+          </MainButton>
+          <ModalWindow>
+            <MainInput>
+              This is test
+            </MainInput>
+            <MainButton>
+            Добавить
+            </MainButton>
+          </ModalWindow>
+        </MainContainer>,
+        mainContainer
+      );
 
     </script>
 </body>
