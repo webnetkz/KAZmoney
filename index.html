@@ -26,6 +26,10 @@
     <script type="text/babel">
       class MainButton extends React.Component
       {
+        sendNewData()
+        {
+          console.log("Запуск обработчика в пустую");
+        }
         render()
         {
           var MainButtonStyles = {
@@ -42,10 +46,57 @@
           }
 
           return (
-            <div style={MainButtonStyles}>
+            <div style={MainButtonStyles} onClick={this.sendNewData}>
               {this.props.children}
             </div>
           );
+        }
+      }
+
+
+      function showModalWindow()
+      {
+        let modalAnimation = document.createElement("style");
+        modalAnimation.innerHTML = `
+          .commingModalWindow { 
+            animation: showModal 0.2s linear;
+            transition-duration: 400ms;
+          }
+          @keyframes showModal
+          {
+            from
+            {
+              opacity: 0;
+              top: -40vh;
+            }
+            to
+            {
+              opacity: 1;
+              top: 0;
+            }
+          }
+        `;
+        document.head.appendChild(modalAnimation);
+        document.querySelector(".commingModalWindow").style.display = "block";
+        setTimeout(() => {
+          modalAnimation.remove();
+        }, 300);
+      }
+
+
+      class ComingButton extends MainButton
+      {
+        sendNewData()
+        {
+          showModalWindow();
+        }
+      }
+
+      class ConsumptionButton extends MainButton
+      {
+        sendNewData()
+        {
+          showModalWindow();
         }
       }
 
@@ -81,6 +132,7 @@
         render()
         {
           var ModalWindowStyles = {
+            display: "none",
             color: "white",
             backgroundColor: "#292A2D",
             height: "40vh",
@@ -97,7 +149,7 @@
           }
 
           return (
-            <div style={ModalWindowStyles}>
+            <div style={ModalWindowStyles} className={"commingModalWindow"}>
               {this.props.children}
             </div>
           );
@@ -133,18 +185,18 @@
 
       ReactDOM.render(
         <MainContainer>
-          <MainButton>
+          <ComingButton>
             Приход +
-          </MainButton>
-          <MainButton>
+          </ComingButton>
+          <ConsumptionButton>
             Расход -
-          </MainButton>
+          </ConsumptionButton>
           <ModalWindow>
             <MainInput>
               This is test
             </MainInput>
             <MainButton>
-            Добавить
+              Добавить
             </MainButton>
           </ModalWindow>
         </MainContainer>,
