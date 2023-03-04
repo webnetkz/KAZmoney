@@ -1,15 +1,9 @@
 #####################################
-#
-#  Visual object recognition based
-#        chess bot interface
-#
-#                 by
-#
-#              WebNetKZ
-#
+# Шахматный бот, с возможностью выбора
+# шахматного движка.
+# For Windows
 #####################################
 
-# packages
 import sys
 import cv2
 import numpy as np
@@ -18,16 +12,14 @@ import chess
 import chess.engine
 import time
 
-
-# constants (modify if needed)
 BOARD_SIZE = 832
 DARK_SQUARE_THRESHOLD = 150
 CELL_SIZE = int(BOARD_SIZE / 8)
 BOARD_TOP_COORD = 172
 BOARD_LEFT_COORD = 512
 
-CONFIDENCE = 0.99
-DETECTION_NOICE_THRESHOLD = 8
+CONFIDENCE = 0.99 # Уверенность определения фигуры
+DETECTION_NOICE_THRESHOLD = 8 
 PIECES_PATH = './piece_recognition/pieces/'
 
 # players
@@ -206,11 +198,11 @@ def search(fen):
     print(board)
 
     # load Stockfish engine
-    engine = chess.engine.SimpleEngine.popen_uci("./Stockfish/stockfish.exe")
-
+    engine = chess.engine.SimpleEngine.popen_uci("./chess_engines/Stockfish/stockfish.exe")
     # load BBC engine
-    #engine = chess.engine.SimpleEngine.popen_uci("./bbc/bbc.exe")
-    #engine = chess.engine.SimpleEngine.popen_uci("./xiphos/xiphos.exe")
+    #engine = chess.engine.SimpleEngine.popen_uci("./chess_engines/bbc/bbc.exe")
+     # load Xiphos engine
+    #engine = chess.engine.SimpleEngine.popen_uci("./chess_engines/xiphos/xiphos.exe")
     
 
 
