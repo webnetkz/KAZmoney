@@ -79,13 +79,7 @@ def locate_piece(screenshot, piece_location):
         piece = piece_location[index]
         
         # draw rectangle around recognized piece
-        cv2.rectangle(
-            screenshot,
-            (piece.left, piece.top),
-            (piece.left + piece.width, piece.top + piece.height),
-            (0, 0, 255),
-            2
-        )
+        cv2.rectangle(screenshot, (piece.left, piece.top), (piece.left + piece.width, piece.top + piece.height), (0, 0, 255), 2)
     
     # display image
     cv2.imshow('Screenshot', screenshot)
@@ -137,7 +131,7 @@ def recognize_position():
     # return piece locations 
     return screenshot, piece_locations
 
-# convert piece coordinates to FEN string
+# конвертирукт координаты фигур в FEN
 def locations_to_fen(piece_locations):
     # FEN string
     fen = ''
@@ -194,7 +188,7 @@ def locations_to_fen(piece_locations):
     # return FEN string
     return fen
             
-# search position for a best move
+# находит лучший ход
 def search(fen):
     # create chess board instance and set position from FEN string
     print('Searching best move for this position:')
