@@ -4,7 +4,7 @@ import pyautogui as pg
 
 
 def get_start_position():
-    # Захват скриншота экрана
+    # Захват экрана
     pg.screenshot('./images/shot_board.png')
     img = cv2.imread('./images/shot_board.png')
 

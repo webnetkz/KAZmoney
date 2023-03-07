@@ -15,7 +15,6 @@ from find_board import get_start_position
 
 
 position_board = get_start_position()
-print(position_board)
 
 BOARD_SIZE = position_board[2]-4
 DARK_SQUARE_THRESHOLD = 160
@@ -25,7 +24,7 @@ BOARD_LEFT_COORD = position_board[0]+2
 
 CONFIDENCE = 0.99 # Уверенность определения фигуры
 DETECTION_NOICE_THRESHOLD = 8 
-PIECES_PATH = './piece_recognition/pieces/'
+PIECES_PATH = './images/figures/'
 
 # players
 WHITE = 0
@@ -58,18 +57,27 @@ get_square = [
   
 # map piece names to FEN chars
 piece_names = {
-    'black_king': 'k',
-    'black_queen': 'q',
-    'black_rook': 'r',
-    'black_bishop': 'b',
-    'black_knight': 'n',
-    'black_pawn': 'p',
-    'white_knight': 'N',
-    'white_pawn': 'P',
-    'white_king': 'K',
-    'white_queen': 'Q',
-    'white_rook': 'R',
-    'white_bishop': 'B'
+    'b_rook_w': 'r',
+    'b_horse_b': 'n',
+    'b_bishop_w': 'b',
+    'b_queen_b': 'q',
+    'b_king_w': 'k',
+    'b_bishop_b': 'b',
+    'b_horse_w': 'n',
+    'b_rook_b': 'r',
+    'b_pawn_b': 'x',
+    'b_pawn_w': 'p',
+
+    'w_pawn_w': 'P',
+    'w_pawn_b': 'X',
+    'w_rook_b': 'R',
+    'w_horse_w': 'N',
+    'w_bishop_b': 'B',
+    'w_queen_w': 'Q',
+    'w_king_b': 'K',
+    'w_bishop_w': 'B',
+    'w_horse_b': 'N',
+    'w_rook_w': 'R'
 }
 
 # locate piece on image
@@ -85,32 +93,40 @@ def locate_piece(screenshot, piece_location):
     cv2.imshow('Screenshot', screenshot)
     cv2.waitKey(0)
 
-# get coordinates of chess pieces
+# Получение положения фигур
 def recognize_position():
-    # piece locations
     piece_locations = {
-        'black_king': [],
-        'black_queen': [],
-        'black_rook': [],
-        'black_bishop': [],
-        'black_knight': [],
-        'black_pawn': [],
-        'white_knight': [],
-        'white_pawn': [],
-        'white_king': [],
-        'white_queen': [],
-        'white_rook': [],
-        'white_bishop': []
+        # b = black, w = white
+        'b_rook_w': [],
+        'b_horse_b': [],
+        'b_bishop_w': [],
+        'b_queen_b': [],
+        'b_king_w': [],
+        'b_bishop_b': [],
+        'b_horse_w': [],
+        'b_rook_b': [],
+        'b_pawn_b': [],
+        'b_pawn_w': [],
+
+        'w_pawn_w': [],
+        'w_pawn_b': [],
+        'w_rook_b': [],
+        'w_horse_w': [],
+        'w_bishop_b': [],
+        'w_queen_w': [],
+        'w_king_b': [],
+        'w_bishop_w': [],
+        'w_horse_b': [],
+        'w_rook_w': []
     }
 
-    # take a board snapshot
     screenshot = cv2.cvtColor(np.array(pg.screenshot()), cv2.COLOR_RGB2BGR)
     
-    # # loop over piece names
+    # Переберает имена фигур
     for piece in piece_names.keys():
-        # store piece locations
+        # Проверяет если фигура в сохраненных изображениях
         for location in pg.locateAllOnScreen(PIECES_PATH + piece + '.png', confidence=CONFIDENCE):
-            # false detection flag
+            # Не найдено совподение
             noise = False
             
             # loop over matched pieces
@@ -124,11 +140,12 @@ def recognize_position():
             # skip noice detections
             if noise: continue
             
-            # detect piece
+            # Отображает сообщение в консоль о найденой фигуре
             piece_locations[piece].append(location)
             print('detecting:', piece, location)
             
-    # return piece locations 
+    exit()
+    # Возврящает все найденные фигуры 
     return screenshot, piece_locations
 
 # конвертирукт координаты фигур в FEN
@@ -163,6 +180,9 @@ def locations_to_fen(piece_locations):
                             fen += str(empty)
                             empty = 0
 
+                        print(piece_names[piece_type])
+                        # position_to_fen = piece_names[piece_type].replace('x', '')
+                        # position_to_fen = position_to_fen.replace('X', '')
                         fen += piece_names[piece_type]
                         is_piece = (square, piece_names[piece_type])
             
@@ -271,7 +291,7 @@ while True:
         pg.moveTo(to_sq)
         pg.click()
         print(from_sq)
-        pg.moveTo(40, 20)
+        pg.moveTo(500, 100)
         
         # wait for 3 seconds
         time.sleep(3)
