@@ -1,50 +1,47 @@
-# import cv2
-
-# def find_chessboard_corner(image_path):
-#     # загрузка изображения
-#     img = cv2.imread(image_path)
-
-#     # применение фильтра Гаусса
-#     blurred = cv2.GaussianBlur(img, (5, 5), 0)
-
-#     # выделение границ объектов на изображении с помощью алгоритма Canny
-#     edges = cv2.Canny(blurred, 100, 200)
-
-#     # поиск контуров на изображении
-#     contours, _ = cv2.findContours(edges, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-
-#     # нахождение контура, соответствующего шахматной доске
-#     chessboard_contour = None
-#     for contour in contours:
-#         # аппроксимация контура
-#         approx = cv2.approxPolyDP(contour, 0.02*cv2.arcLength(contour, True), True)
-
-#         # проверка, является ли контур прямоугольником
-#         if len(approx) == 4 and cv2.isContourConvex(approx):
-#             x, y, w, h = cv2.boundingRect(contour)
-#             aspect_ratio = float(w)/h
-#             if aspect_ratio >= 0.8 and aspect_ratio <= 1.2:
-#                 chessboard_contour = approx
-#                 break
-
-#     if chessboard_contour is not None:
-#         # нахождение координат левого верхнего угла контура
-#         leftmost = tuple(chessboard_contour[chessboard_contour[:,:,0].argmin()][0])
-#         topmost = tuple(chessboard_contour[chessboard_contour[:,:,1].argmin()][0])
+import numpy as np
+import cv2
+import pyautogui
+from PIL import ImageGrab
 
 
-#         cv2.imshow('image', img)
-#         cv2.waitKey(0)
-#         return topmost
-#     else:
-#         return None
+def create_clear_matrix():
+    # Получаем размеры экрана
+    screen_width, screen_height = pyautogui.size()
 
-import tkinter as tk
+    # Создаем пустое черное изображение
+    black_image = np.zeros((screen_height, screen_width, 3), dtype=np.uint8)
+    return black_image
 
-root = tk.Tk()
-width_px = root.winfo_screenwidth()
-height_px = root.winfo_screenheight()
-root.destroy()
+def process_image():
+    # Захват скриншота экрана
+    img = ImageGrab.grab()
 
-print("Ширина монитора: {} пикселей".format(width_px))
-print("Высота монитора: {} пикселей".format(height_px))
+    # Преобразование изображения в массив numpy и перевод в серый цвет
+    img_np = np.array(img)
+    gray = cv2.cvtColor(img_np, cv2.COLOR_BGR2GRAY)
+
+    # Применение фильтра Гаусса для уменьшения шума на изображении
+    blurred = cv2.GaussianBlur(gray, (1, 1), 0)
+
+    # Обнаружение горизонтальных и вертикальных линий на изображении
+    edges = cv2.Canny(blurred, 50, 50, apertureSize=3)
+    lines = cv2.HoughLinesP(edges, 1, np.pi/180, threshold=50, minLineLength=100, maxLineGap=5)
+
+    matrix_img = create_clear_matrix()
+
+    # Рисование линий на изображении
+    for line in lines:
+        x1, y1, x2, y2 = line[0]
+        cv2.line(img_np, (x1, y1), (x2, y2), (0, 0, 255), 1)
+        cv2.line(matrix_img, (x1, y1), (x2, y2), (0, 0, 255), 1)
+
+
+    # Вывод изображения с маркерами
+    cv2.imshow("Image", img_np)
+    cv2.waitKey(0)
+    # Вывод изображения с маркерами
+    cv2.imshow("Image", matrix_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+process_image()
