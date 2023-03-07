@@ -11,12 +11,17 @@ import pyautogui as pg
 import chess
 import chess.engine
 import time
+from find_board import get_start_position
 
-BOARD_SIZE = 832
-DARK_SQUARE_THRESHOLD = 150
+
+position_board = get_start_position()
+print(position_board)
+
+BOARD_SIZE = position_board[2]-4
+DARK_SQUARE_THRESHOLD = 160
 CELL_SIZE = int(BOARD_SIZE / 8)
-BOARD_TOP_COORD = 172
-BOARD_LEFT_COORD = 512
+BOARD_TOP_COORD = position_board[1]+3
+BOARD_LEFT_COORD = position_board[0]+2
 
 CONFIDENCE = 0.99 # Уверенность определения фигуры
 DETECTION_NOICE_THRESHOLD = 8 
@@ -207,7 +212,7 @@ def search(fen):
 
 
     # get best move
-    best_move = str(engine.play(board, chess.engine.Limit(time=0.1)).move)
+    best_move = str(engine.play(board, chess.engine.Limit(time=3)).move)
     
     print(best_move)
 
@@ -271,6 +276,8 @@ while True:
         pg.click()
         pg.moveTo(to_sq)
         pg.click()
+        print(from_sq)
+        pg.moveTo(40, 20)
         
         # wait for 3 seconds
         time.sleep(3)

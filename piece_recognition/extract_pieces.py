@@ -17,13 +17,29 @@
 # packages
 import cv2
 import pyautogui as pg
+from find_board import get_start_position
+
+
+position_board = get_start_position()
+print(position_board)
+
+
 
 # constants (modify if needed)
-BOARD_SIZE = 832
-DARK_SQUARE_THRESHOLD = 180
+BOARD_SIZE = position_board[2]-4
+DARK_SQUARE_THRESHOLD = 210
 CELL_SIZE = int(BOARD_SIZE / 8)
-BOARD_TOP_COORD = 172
-BOARD_LEFT_COORD = 512
+BOARD_TOP_COORD = position_board[1]+3
+BOARD_LEFT_COORD = position_board[0]+2
+# BOARD_SIZE = 832
+# BOARD_TOP_COORD = 172
+# BOARD_LEFT_COORD = 512
+
+
+print(BOARD_SIZE)
+print(BOARD_TOP_COORD)
+print(BOARD_LEFT_COORD)
+
 
 # map pieces
 piece_names = {
@@ -51,6 +67,13 @@ pg.screenshot('screenshot.png')
 # load local screenshot
 screenshot = cv2.imread('screenshot.png')
 
+cv2.circle(screenshot, (BOARD_LEFT_COORD, BOARD_TOP_COORD), (1), (255, 0, 0), thickness=1)
+cv2.circle(screenshot, (BOARD_LEFT_COORD+BOARD_SIZE, BOARD_TOP_COORD), (1), (255, 0, 0), thickness=1)
+
+#cv2.imshow("x", screenshot)
+#cv2.waitKey(0)
+
+
 # convert screenshot to grayscale
 screenshot_grayscale = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
 
@@ -65,6 +88,9 @@ for row in range(8):
         if row in [0, 1, 5, 6]:
             # match only light squares
             if screenshot_grayscale[y][x] > DARK_SQUARE_THRESHOLD:
+                print(screenshot_grayscale[y][x])
+                cv2.imshow("x", screenshot_grayscale[y:y+3, x:x+3])
+                #cv2.waitKey(0)
                 # skip empty cells
                 if row == 1 and col < 4: continue
                 if row == 5 and col < 4: continue
@@ -74,7 +100,7 @@ for row in range(8):
                 
                 # uncomment to display extracted images
                 cv2.imshow('scr', piece_image)
-                cv2.waitKey(0)
+                #cv2.waitKey(0)
                 
                 # store extracted image
                 cv2.imwrite('./pieces/' + piece_names[str(piece_code)] + '.png', piece_image)

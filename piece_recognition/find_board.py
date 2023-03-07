@@ -5,8 +5,8 @@ import pyautogui as pg
 
 def get_start_position():
     # Захват скриншота экрана
-    pg.screenshot('./images/shot_board.png')
-    img = cv2.imread('./images/shot_board.png')
+    pg.screenshot('../images/shot_board.png')
+    img = cv2.imread('../images/shot_board.png')
 
 
     # Преобразование изображения в массив numpy и перевод в серый цвет
@@ -26,10 +26,10 @@ def get_start_position():
     for line in lines:
         x1, y1, x2, y2 = line[0]
         cv2.line(img_np, (x1, y1), (x2, y2), (0, 0, 255), 1)
-        cv2.line(matrix_img, (x1, y1), (x2, y2), (0, 0, 255), 3)
+        cv2.line(matrix_img, (x1, y1), (x2, y2), (0, 0, 255), 2)
 
 
-    cv2.imwrite("./images/no_bg_board.png", matrix_img)
+    cv2.imwrite("../images/no_bg_board.png", matrix_img)
     result_position_chess_board = find_chessboard_contour(matrix_img)
     return result_position_chess_board
 
@@ -60,3 +60,5 @@ def create_clear_matrix():
     # Создаем пустое черное изображение
     black_image = np.zeros((screen_height, screen_width, 3), dtype=np.uint8)
     return black_image
+
+
