@@ -23,18 +23,17 @@ piece_names = {
     # b = black, w = white
     '0': 'b_rook',
     '1': 'b_horse',
-    '2': 'b_bishop_w',
-    '3': 'b_queen_b',
-    '4': 'b_king_w',
+    '2': 'b_bishop',
+    '3': 'b_queen',
+    '4': 'b_king',
     '5': 'b_pawn',
 
-    '6': 'w_pawn',
+    '6': 'w_pawn',    
     '7': 'w_rook',
     '8': 'w_horse',
     '9': 'w_bishop',
     '10': 'w_queen',
     '11': 'w_king',
-    
 }
 
 def remove_color_from_image(bg_image, target_image):
@@ -75,19 +74,19 @@ for row in range(8):
             piece_image = screenshot[y:y + CELL_SIZE, x: x + CELL_SIZE]
 
             bg_color = piece_image[0:3, 0:3]
-            cv2.imshow("x", bg_color)
-            cv2.waitKey(0)
+            # cv2.imshow("x", bg_color)
+            # cv2.waitKey(0)
 
-            cv2.imshow('scr', piece_image)
-            cv2.waitKey(0)
+            # cv2.imshow('scr', piece_image)
+            # cv2.waitKey(0)
 
-            x = remove_color_from_image(bg_color, piece_image)
-            cv2.imshow('scr', x)
-            cv2.waitKey(0)
-            exit()
+            piece_image = remove_color_from_image(bg_color, piece_image)
+            # cv2.imshow('scr', x)
+            # cv2.waitKey(0)
+            # exit()
                   
             # Сохраняет изображения
-            #cv2.imwrite('./images/figures/' + piece_names[str(piece_code)] + '.png', piece_image)
+            cv2.imwrite('./images/figures/' + piece_names[str(piece_code)] + '.png', piece_image)
                   
             # Обновляет код фигуры
             piece_code += 1
