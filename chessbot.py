@@ -41,7 +41,7 @@ except:
     sys.exit(0)
 
 # square to coords
-square_to_coords = [];
+square_to_coords = []
 
 # array to convert board square indices to coordinates (black)
 get_square = [
@@ -55,7 +55,7 @@ get_square = [
     'a1', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'h1'
 ];
   
-# map piece names to FEN chars
+    
 piece_names = {
     'b_rook_w': 'r',
     'b_horse_b': 'n',
@@ -65,11 +65,9 @@ piece_names = {
     'b_bishop_b': 'b',
     'b_horse_w': 'n',
     'b_rook_b': 'r',
-    'b_pawn_b': 'x',
-    'b_pawn_w': 'p',
+    'b_pawn_b': 'p',
 
     'w_pawn_w': 'P',
-    'w_pawn_b': 'X',
     'w_rook_b': 'R',
     'w_horse_w': 'N',
     'w_bishop_b': 'B',
@@ -106,10 +104,8 @@ def recognize_position():
         'b_horse_w': [],
         'b_rook_b': [],
         'b_pawn_b': [],
-        'b_pawn_w': [],
 
         'w_pawn_w': [],
-        'w_pawn_b': [],
         'w_rook_b': [],
         'w_horse_w': [],
         'w_bishop_b': [],
@@ -144,8 +140,6 @@ def recognize_position():
             piece_locations[piece].append(location)
             print('detecting:', piece, location)
             
-    exit()
-    # Возврящает все найденные фигуры 
     return screenshot, piece_locations
 
 # конвертирукт координаты фигур в FEN
@@ -181,10 +175,9 @@ def locations_to_fen(piece_locations):
                             empty = 0
 
                         print(piece_names[piece_type])
-                        # position_to_fen = piece_names[piece_type].replace('x', '')
-                        # position_to_fen = position_to_fen.replace('X', '')
                         fen += piece_names[piece_type]
                         is_piece = (square, piece_names[piece_type])
+
             
             if not len(is_piece):
                 empty += 1
@@ -210,11 +203,11 @@ def locations_to_fen(piece_locations):
             
 # находит лучший ход
 def search(fen):
-    # create chess board instance and set position from FEN string
-    print('Searching best move for this position:')
     print(fen)
+
     board = chess.Board(fen=fen)
     print(board)
+    exit()
 
     # load Stockfish engine
     engine = chess.engine.SimpleEngine.popen_uci("./chess_engines/Stockfish/stockfish.exe")
@@ -281,19 +274,17 @@ while True:
         best_move = search(fen)
         print('Best move:', best_move)
 
-        # extract source and destination square coordinates
+        # Получает позицию квадратов для хода
         from_sq = square_to_coords[get_square.index(best_move[0] + best_move[1])]
         to_sq = square_to_coords[get_square.index(best_move[2] + best_move[3])]
 
-        # make move on board
+        # Совершает ход
         pg.moveTo(from_sq)
         pg.click()
         pg.moveTo(to_sq)
         pg.click()
         print(from_sq)
         pg.moveTo(500, 100)
-        
-        # wait for 3 seconds
         time.sleep(3)
     
     except: sys.exit(0)
