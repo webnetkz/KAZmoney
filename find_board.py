@@ -33,6 +33,7 @@ def get_start_position():
     result_position_chess_board = find_chessboard_contour(matrix_img)
     return result_position_chess_board
 
+# Возвращает x, y, w, h всей доски
 def find_chessboard_contour(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
