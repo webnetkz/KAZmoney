@@ -6,6 +6,7 @@
 import cv2
 import pyautogui as pg
 import sys
+import numpy as np
 from find_board import get_start_position
 
 position_board = get_start_position()
@@ -86,7 +87,6 @@ if position_of_figures == 1:
               # Получает изображение фигуры
               piece_image = screenshot[y:y + CELL_SIZE, x: x + CELL_SIZE]
 
-                  
               # cv2.imshow('scr', piece_image)
               # cv2.waitKey(0)
                   
@@ -116,10 +116,7 @@ else:
               # Получает изображение фигуры
               piece_image = screenshot[y:y + CELL_SIZE, x: x + CELL_SIZE]
 
-                  
-              cv2.imshow('scr', piece_image)
-              cv2.waitKey(0)
-                  
+
               # Сохраняет изображения
               cv2.imwrite('./images/figures/' + piece_names[str(piece_code)] + '.png', piece_image)
                   
@@ -132,6 +129,7 @@ else:
       # Смещает итерацию на строку ниже
       x = BOARD_LEFT_COORD
       y += CELL_SIZE
+
 
 cv2.destroyAllWindows()
 
