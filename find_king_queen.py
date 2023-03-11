@@ -10,7 +10,6 @@ import numpy as np
 position_of_figures = 0
 
 
-
 BOARD_SIZE = 832
 BOARD_TOP_COORD = 172
 BOARD_LEFT_COORD = 512
@@ -20,28 +19,11 @@ x = BOARD_LEFT_COORD
 
 
 piece_names = {
-    # b = black, w = white
-    '0': 'b_rook_w',
-    '1': 'b_horse_b',
-    '2': 'b_bishop_w',
-    '3': 'b_queen_b',
-    '4': 'b_king_w',
-    '5': 'b_bishop_b',
-    '6': 'b_horse_w',
-    '7': 'b_rook_b',
-    '8': 'b_pawn_b',
-    '9': 'b_pawn_w',
-
-    '10': 'w_pawn_w',
-    '11': 'w_pawn_b',
-    '12': 'w_rook_b',
-    '13': 'w_horse_w',
-    '14': 'w_bishop_b',
-    '15': 'w_queen_w',
-    '16': 'w_king_b',
-    '17': 'w_bishop_w',
-    '18': 'w_horse_b',
-    '19': 'w_rook_w'
+  # b = black, w = white
+  '0': 'b_king_b',
+  '1': 'b_queen_w',
+  '2': 'w_king_w',
+  '3': 'w_queen_b',
 }
 
 def remove_color_from_image(bg_image, target_image):
@@ -70,10 +52,11 @@ for row in range(8):
     # Колонки
     for col in range(8):
         # Перебераем строки с фигурами
-        if row in [0, 1, 6, 7]:
+        if row in [1, 6]:
             # Пропускает клетки с пешками
             if row == 1 and col > 1: continue
             if row == 6 and col > 1: continue
+
             # Получает изображение фигуры
             piece_image = screenshot[y:y + CELL_SIZE, x: x + CELL_SIZE]
 

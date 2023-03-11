@@ -22,14 +22,14 @@ def match_images(image1_path, image2_path):
     matches = sorted(matches, key=lambda x: x.distance)
 
     # Проверяем, есть ли хотя бы 6 соответствий
-    if len(matches) >= 12:
+    if len(matches) >= 4:
         return True
     else:
         return False
 
 
 # Загружаем изображения
-img1 = './images/figures/w_horse_b.png'
-img2 = './images/figures/w_horse_w.png'
+img1 = './images/figures/w_rook_b.png'
+img2 = './images/figures/w_rook_w.png'
 
 print(match_images(img1, img2))
