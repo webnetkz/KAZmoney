@@ -89,7 +89,6 @@ if position_of_figures == 1:
 
               # cv2.imshow('scr', piece_image)
               # cv2.waitKey(0)
-                  
               # Сохраняет изображения
               cv2.imwrite('./images/figures/' + piece_names[str(piece_code)] + '.png', piece_image)
                   

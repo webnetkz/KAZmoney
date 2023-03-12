@@ -1,6 +1,6 @@
 import cv2
 
-def match_images(image1_path, image2_path):
+def match_images(image1_path, image2_path, priznaks):
     # Загружаем изображения
     img1 = cv2.imread(image1_path, cv2.IMREAD_GRAYSCALE)
     img2 = cv2.imread(image2_path, cv2.IMREAD_GRAYSCALE)
@@ -22,14 +22,8 @@ def match_images(image1_path, image2_path):
     matches = sorted(matches, key=lambda x: x.distance)
 
     # Проверяем, есть ли хотя бы 6 соответствий
-    if len(matches) >= 4:
+    if len(matches) >= priznaks:
         return True
     else:
         return False
 
-
-# Загружаем изображения
-img1 = './images/figures/w_rook_b.png'
-img2 = './images/figures/w_rook_w.png'
-
-print(match_images(img1, img2))
