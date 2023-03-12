@@ -3,7 +3,7 @@
 import cv2
 import pyautogui as pg
 import numpy as np
-from matches import match_images
+from matches import find_matching_contours
 import os
 
 
@@ -88,7 +88,7 @@ for row in range(8):
             # 19
             # horse b
             
-            if match_images("tmp.png", PIECES_PATH+'w_rook_w'+'.png', 5):
+            if find_matching_contours("tmp.png", PIECES_PATH+'b_king_w'+'.png'):
               print("b_bishop_b", piece_code)
 
 

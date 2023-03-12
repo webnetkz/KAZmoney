@@ -10,6 +10,9 @@ import numpy as np
 import pyautogui as pg
 import chess
 import chess.engine
+import svgwrite
+
+
 import time
 from find_board import get_start_position
 
@@ -19,8 +22,8 @@ position_board = get_start_position()
 BOARD_SIZE = position_board[2]-4
 DARK_SQUARE_THRESHOLD = 160
 CELL_SIZE = int(BOARD_SIZE / 8)
-BOARD_TOP_COORD = position_board[1]+3
-BOARD_LEFT_COORD = position_board[0]+2
+BOARD_TOP_COORD = position_board[1]+4
+BOARD_LEFT_COORD = position_board[0]+3
 
 CONFIDENCE = 0.99 # Уверенность определения фигуры
 DETECTION_NOICE_THRESHOLD = 8 
@@ -62,17 +65,23 @@ piece_names = {
     'b_bishop_w': 'b',
     'b_queen_b': 'q',
     'b_king_w': 'k',
+    'b_queen_w': 'q',
+    'b_king_b': 'k',
     'b_bishop_b': 'b',
     'b_horse_w': 'n',
     'b_rook_b': 'r',
     'b_pawn_b': 'p',
+    # 'b_pawn_w': 'p',
 
+    'w_pawn_b': 'P',
     'w_pawn_w': 'P',
     'w_rook_b': 'R',
     'w_horse_w': 'N',
     'w_bishop_b': 'B',
     'w_queen_w': 'Q',
     'w_king_b': 'K',
+    'w_queen_b': 'Q',
+    'w_king_w': 'K',
     'w_bishop_w': 'B',
     'w_horse_b': 'N',
     'w_rook_w': 'R'
@@ -91,6 +100,45 @@ def locate_piece(screenshot, piece_location):
     cv2.imshow('Screenshot', screenshot)
     cv2.waitKey(0)
 
+
+def display_board(fen):
+    board = chess.Board(fen=fen)
+    board_str = ''
+
+    # Define the Unicode symbols for the chess pieces
+    symbols = {
+        chess.PAWN: '&#9723;',
+        chess.KNIGHT: '&#9822;',
+        chess.BISHOP: '&#9821;',
+        chess.ROOK: '&#9820;',
+        chess.QUEEN: '&#9819;',
+        chess.KING: '&#9818;'
+    }
+
+    # Create the board string
+    for rank in range(8):
+        board_str += str(8 - rank) + ' '
+        for file in range(8):
+            square = chess.square(file, rank)
+            piece = board.piece_at(square)
+            if piece is None:
+                board_str += '  '
+            else:
+                symbol = symbols[piece.piece_type]
+                if piece.color == chess.WHITE:
+                    symbol = symbol.encode('unicode_escape').decode('utf-8').replace('\\u', '&#x') + ';'
+                else:
+                    symbol = symbol.encode('unicode_escape').decode('utf-8').replace('\\u', '&#x1') + ';'
+                board_str += symbol
+        board_str += '\n'
+    board_str += '  a b c d e f g h'
+
+    # Print the board string
+    print(board_str)
+
+    
+
+
 # Получение положения фигур
 def recognize_position():
     piece_locations = {
@@ -100,24 +148,34 @@ def recognize_position():
         'b_bishop_w': [],
         'b_queen_b': [],
         'b_king_w': [],
+        'b_queen_w': [],
+        'b_king_b': [],
         'b_bishop_b': [],
         'b_horse_w': [],
         'b_rook_b': [],
         'b_pawn_b': [],
+        'b_pawn_w': [],
 
+
+        'w_pawn_b': [],
         'w_pawn_w': [],
         'w_rook_b': [],
         'w_horse_w': [],
         'w_bishop_b': [],
         'w_queen_w': [],
         'w_king_b': [],
+        'w_queen_b': [],
+        'w_king_w': [],
         'w_bishop_w': [],
         'w_horse_b': [],
         'w_rook_w': []
     }
 
     screenshot = cv2.cvtColor(np.array(pg.screenshot()), cv2.COLOR_RGB2BGR)
-    
+    white_cell = screenshot[0 + BOARD_TOP_COORD:0 + BOARD_TOP_COORD + CELL_SIZE, 0 + BOARD_LEFT_COORD:0 + BOARD_LEFT_COORD + CELL_SIZE]
+    black_cell = screenshot[0 + BOARD_TOP_COORD:0 + BOARD_TOP_COORD + CELL_SIZE, 0 + BOARD_LEFT_COORD + CELL_SIZE:0 + BOARD_LEFT_COORD + (CELL_SIZE*2)]
+
+
     # Переберает имена фигур
     for piece in piece_names.keys():
         # Проверяет если фигура в сохраненных изображениях
@@ -174,7 +232,6 @@ def locations_to_fen(piece_locations):
                             fen += str(empty)
                             empty = 0
 
-                        print(piece_names[piece_type])
                         fen += piece_names[piece_type]
                         is_piece = (square, piece_names[piece_type])
 
@@ -206,8 +263,24 @@ def search(fen):
     print(fen)
 
     board = chess.Board(fen=fen)
-    print(board)
-    exit()
+    xBoard = str(board)
+    #print(board)
+    xBoard = xBoard.replace("P", "♙")
+    xBoard = xBoard.replace("p", "♟")
+    xBoard = xBoard.replace("R", "♖")
+    xBoard = xBoard.replace("r", "♜")
+    xBoard = xBoard.replace("B", "♗")
+    xBoard = xBoard.replace("b", "♝")
+    xBoard = xBoard.replace("N", "♘")
+    xBoard = xBoard.replace("n", "♞")
+    xBoard = xBoard.replace("K", "♔")
+    xBoard = xBoard.replace("k", "♚")
+    xBoard = xBoard.replace("Q", "♕")
+    xBoard = xBoard.replace("q", "♛")
+
+    print(xBoard)
+
+    # exit()
 
     # load Stockfish engine
     engine = chess.engine.SimpleEngine.popen_uci("./chess_engines/Stockfish/stockfish.exe")
@@ -219,7 +292,7 @@ def search(fen):
 
 
     # get best move
-    best_move = str(engine.play(board, chess.engine.Limit(time=3)).move)
+    best_move = str(engine.play(board, chess.engine.Limit(time=8)).move)
     
     print(best_move)
 
@@ -285,7 +358,7 @@ while True:
         pg.click()
         print(from_sq)
         pg.moveTo(500, 100)
-        time.sleep(3)
+        time.sleep(5)
     
     except: sys.exit(0)
 

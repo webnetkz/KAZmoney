@@ -26,4 +26,50 @@ def match_images(image1_path, image2_path, priznaks):
         return True
     else:
         return False
+    
+# Функция для поиска совпадающих контуров на двух изображениях
+def find_matching_contours(img1_path, img2_path):
+    # Загрузка изображений
+    img1 = cv2.imread(img1_path)
+    img1_gray = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 
+    img2 = cv2.imread(img2_path)
+    img2_gray = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+
+    # Проверка соответствия цветов
+    img1_hsv = cv2.cvtColor(img1, cv2.COLOR_BGR2HSV)
+    img2_hsv = cv2.cvtColor(img2, cv2.COLOR_BGR2HSV)
+    img1_mean = cv2.mean(img1_hsv)
+    img2_mean = cv2.mean(img2_hsv)
+    for i in range(3):
+        if abs(img1_mean[i] - img2_mean[i]) / 255 > 0.1:
+            return False
+
+    # Поиск контуров на изображениях
+    contours1, _ = cv2.findContours(img1_gray, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    contours2, _ = cv2.findContours(img2_gray, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    # Поиск совпадающих контуров
+    matching_contours = []
+    for c1 in contours1:
+        for c2 in contours2:
+            match = cv2.matchShapes(c1, c2, cv2.CONTOURS_MATCH_I1, 0)
+            if match < 0.1:
+                matching_contours.append(c1)
+                break
+
+    if len(matching_contours) > 0:
+        return True
+    else:
+        return False
+
+
+
+
+
+
+# Загружаем изображения
+# img1 = './images/figures/b_rook_b.png'
+# img2 = './images/figures/w_rook_w.png'
+
+# print(find_matching_contours(img1, img2))
