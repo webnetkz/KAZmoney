@@ -222,7 +222,7 @@ def search(fen):
     #engine = chess.engine.SimpleEngine.popen_uci("./chess_engines/xiphos/xiphos.exe")
     
     # Получает лучший ход
-    best_move = str(engine.play(board, chess.engine.Limit(time=3)).move)
+    best_move = str(engine.play(board, chess.engine.Limit(time=1)).move)
     
     print(best_move)
     engine.quit()
