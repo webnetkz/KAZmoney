@@ -1,4 +1,4 @@
-<h1>Шахматный бот <u>V.1.0.1</u> <img src="./images/public/logo.png"></h1>
+<h1>Шахматный бот <u>V.1.0.1</u> <img src="./images/public/logo.png" style="float: right"></h1>
 
 <hr>
 Шахматный бот - это программа на Python для игры в шахматы с использованием машинного зрения. Он может определить шахматную доску на экране, собрать изображения шахматных фигур для последующего определения на доске и играть с пользователем или другим ботом. Этот проект использует библиотеки cv2, numpy, pyautogui и chess.
@@ -32,7 +32,7 @@
     <b><li>/figures/</li></b>
     <b><li>/public/</li></b>
     <li>screenshot_1.png</li>
-  <ul>
+  </ul>
   <li>/chessbot.py</li>
   <li>/find_boadr.py</li>
   <li>/find_figures.py</li>
