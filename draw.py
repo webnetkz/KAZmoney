@@ -1,4 +1,6 @@
 import tkinter as tk
+import os
+
 
 def draw_shape(x1, y1, x2, y2, w):
     root = tk.Tk()
@@ -37,4 +39,13 @@ def draw_shape(x1, y1, x2, y2, w):
 
     blink_arrow()
 
+    def reset():
+        root.destroy() # закрываем текущее окно
+        os.system('pkill -f python') # закрываем все окна с процессами Python
+        os.system('python3 show_best_move.py white &') # перезапускаем файл
+
+    reset_button = tk.Button(root, text="Reset", command=reset, bg="red", fg="white", font=("Arial", 24, "bold"))
+    reset_button.place(x=root.winfo_screenwidth() - reset_button.winfo_reqwidth(), y=0)
+
     root.mainloop()
+
