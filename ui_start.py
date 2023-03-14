@@ -33,6 +33,7 @@ class MatrixChess(MDApp):
             )
         )
     
+
     def start_calibration(self, instance):
         self.start_text.text = "Pleace wait"
         instance.text="Loading..."
@@ -45,19 +46,17 @@ class MatrixChess(MDApp):
             self.start_text.text = "Please make sure the entire chessboard is visible"
             instance.text="Reset"
         else:
-          instance.parent.remove_widget(instance)
+          #instance.parent.remove_widget(instance)
           
           from draw import draw_rect
           threading.Thread(target = draw_rect, args = (position_board[0]+3, position_board[1]+4, position_board[2]-4)).start()
-          self.start_text.text = "The first step is passed, there is not much left"
-
-          time.sleep(2)
+          self.start_text.text = "Okay, the last step is left. Start the game as black pieces."
           # Перебераем все квадраты
-          subprocess.run(['python3', 'find_figures.py', 's'])
-          self.start_text.text = "Last step"
-          subprocess.run(['python3', 'calibration_move.py'])
+          subprocess.run(['python3', 'find_figures.py'])
+          instance.text = "Make sure you start playing as black"
 
 
 
-threading.Thread(target = MatrixChess().run(), args = ()).start()
+
+MatrixChess().run()
 

@@ -3,6 +3,8 @@
 import cv2
 import pyautogui as pg
 import numpy as np
+from draw import draw_rect
+import sys
 
 from find_board import get_start_position
 position_board = get_start_position()
@@ -16,23 +18,40 @@ BOARD_LEFT_COORD = position_board[0]+3
 y = BOARD_TOP_COORD
 x = BOARD_LEFT_COORD
 
+# Игрок
+WHITE = 0
+BLACK = 1
 
-piece_names = {
-  # b = black, w = white
-  '0': 'b_king_b',
-  '1': 'b_queen_w',
-  '2': 'w_king_w',
-  '3': 'w_queen_b',
-}
+side_to_move = 0
 
+# Выбор игры за белых или черных
+try:
+    if sys.argv[1] == 'b': side_to_move = BLACK
+except:
+    print('Используй: "find_king_queen.py w" или "find_king_queen.py b"')
+    sys.exit(0)
+
+
+if side_to_move == 0:
+  piece_names = {
+    # b = black, w = white
+    '0': 'b_king_b',
+    '1': 'b_queen_w',
+  }
+else:
+  piece_names = {
+    # b = black, w = white
+    '0': 'w_king_b',
+    '1': 'w_queen_w',
+  }
 
 # Получает изображение и обрабатывает его
 pg.screenshot('screenshot.png')
 screenshot = cv2.imread('screenshot.png')
-#screenshot_grayscale = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
 
 # Код фигуры
 piece_code = 0
+
 
 # Строки
 for row in range(8):
@@ -40,18 +59,15 @@ for row in range(8):
     for col in range(8):
         # Перебераем строки с фигурами
         if row == 6:
-            # Пропускает клетки с пешками
-            if row == 1 and col > 2: continue
-            if row == 6 and col > 2: continue
-
-            # Получает изображение фигуры
-            piece_image = screenshot[y:y + CELL_SIZE, x: x + CELL_SIZE]
-                  
-            # Сохраняет изображения
-            cv2.imwrite('./images/figures/' + piece_names[str(piece_code)] + '.png', piece_image)
-                  
-            # Обновляет код фигуры
-            piece_code += 1
+            if col == 3 or col == 4:
+              # Получает изображение фигуры
+              piece_image = screenshot[y:y + CELL_SIZE, x: x + CELL_SIZE]
+              draw_rect(x,y,CELL_SIZE)      
+              # Сохраняет изображения
+              cv2.imwrite('./images/figures/' + piece_names[str(piece_code)] + '.png', piece_image)
+                    
+              # Обновляет код фигуры
+              piece_code += 1
           
         # Смещает итерацию на следующую клетку
         x += CELL_SIZE

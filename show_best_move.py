@@ -261,5 +261,7 @@ try:
 
     draw_shape(from_sq[0], from_sq[1], to_sq[0], to_sq[1], CELL_SIZE)
 
+    time.sleep(5)
+    exit()
     
 except: sys.exit(0)

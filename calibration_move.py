@@ -2,10 +2,25 @@ import numpy as np
 import pyautogui as pg
 import time
 import subprocess
+import sys
 
 # Получение стартовой позиции и ширины шахматной доски
 from find_board import get_start_position
 position_board = get_start_position()
+
+
+# Игрок
+WHITE = 0
+BLACK = 1
+
+side_to_move = 0
+
+# Выбор игры за белых или черных
+try:
+    if sys.argv[1] == 'b': side_to_move = BLACK
+except:
+    print('Используй: "chessbot.py w" или "chessbot.py b"')
+    sys.exit(0)
 
 # Константы для работы бота
 BOARD_SIZE = position_board[2]-4
@@ -94,7 +109,11 @@ def go_move():
   pg.moveTo(to_sq)
   pg.click()
   time.sleep(3)
-  subprocess.run(['python3', 'find_king_queen.py'])
+  pg.moveTo((0, 0))
+  if side_to_move == 0:
+    subprocess.run(['python3', 'find_king_queen.py', 'w'])
+  else:
+    subprocess.run(['python3', 'find_king_queen.py', 'b'])
 
 
 go_move()

@@ -3,19 +3,26 @@
 import cv2
 import pyautogui as pg
 import numpy as np
-import sys
 from find_board import get_start_position
 from draw import draw_rect
+import subprocess
+import sys
 
 position_board = get_start_position()
 position_of_figures = 0
 
-try:
-    if sys.argv[1] == 's': position_of_figures = 1
-except:
-    print('Используй флаг для опрределения позиций s == start postions, g == get positions"')
-    sys.exit(0)
+# Игрок
+WHITE = 0
+BLACK = 1
 
+side_to_move = 0
+
+# Выбор игры за белых или черных
+try:
+    if sys.argv[1] == 'b': side_to_move = BLACK
+except:
+    print('Используй: "find_king_queen.py w" или "find_king_queen.py b"')
+    sys.exit(0)
 
 
 BOARD_SIZE = position_board[2]-4
@@ -51,117 +58,44 @@ piece_names = {
     '19': 'w_rook_w'
 }
 
-if position_of_figures == 0:
-    piece_names = {
-      # b = black, w = white
-      '0': 'b_king_b',
-      '1': 'b_queen_w',
-      '2': 'w_king_w',
-      '3': 'w_queen_b',
-    }
-
-def remove_color_from_image(bg_image, target_image):
-    # Получаем фоновый цвет из первого изображения
-    bg_color = np.array(cv2.mean(bg_image)[:3], dtype=np.uint8)
-
-    # Извлекаем маску цвета, который нужно удалить из второго изображения
-    mask = cv2.inRange(target_image, bg_color, bg_color)
-
-    # Применяем маску на второе изображение, чтобы удалить цвет фона
-    result = cv2.bitwise_and(target_image, target_image, mask=~mask)
-
-    return result
 
 
 # Получает изображение и обрабатывает его
 pg.screenshot('screenshot.png')
 screenshot = cv2.imread('screenshot.png')
-#screenshot_grayscale = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
 
 
-if position_of_figures == 1:
-  # Код фигуры
-  piece_code = 0
+# Код фигуры
+piece_code = 0
 
-  # Строки
-  for row in range(8):
-      # Колонки
-      for col in range(8):
-          # Перебераем строки с фигурами
-          if row in [0, 1, 6, 7]:
-              # Пропускает клетки с пешками
-              if row == 1 and col > 1: continue
-              if row == 6 and col > 1: continue
-              # Получает изображение фигуры
-              piece_image = screenshot[y:y + CELL_SIZE, x: x + CELL_SIZE]
-              draw_rect(x,y,CELL_SIZE)
-              #bg_color = piece_image[0:3, 0:3]
-              # cv2.imshow("x", bg_color)
-              # cv2.waitKey(0)
-
-              # cv2.imshow('scr', piece_image)
-              # cv2.waitKey(0)
-
-              #piece_image = remove_color_from_image(bg_color, piece_image)
-              # cv2.imshow('scr', x)
-              # cv2.waitKey(0)
-              # exit()
+# Строки
+for row in range(8):
+    # Колонки
+    for col in range(8):
+        # Перебераем строки с фигурами
+        if row in [0, 1, 6, 7]:
+            # Пропускает клетки с пешками
+            if row == 1 and col > 1: continue
+            if row == 6 and col > 1: continue
+            # Получает изображение фигуры
+            piece_image = screenshot[y:y + CELL_SIZE, x: x + CELL_SIZE]
+            #draw_rect(x,y,CELL_SIZE)
+            cv2.imwrite('./images/figures/' + piece_names[str(piece_code)] + '.png', piece_image)
                     
-              # Сохраняет изображения
-              #piece_image = cv2.cvtColor(piece_image, cv2.COLOR_BGR2GRAY)
-              cv2.imwrite('./images/figures/' + piece_names[str(piece_code)] + '.png', piece_image)
-                    
-              # Обновляет код фигуры
-              piece_code += 1
+            # Обновляет код фигуры
+            piece_code += 1
             
-          # Смещает итерацию на следующую клетку
-          x += CELL_SIZE
+        # Смещает итерацию на следующую клетку
+        x += CELL_SIZE
         
-      # Смещает итерацию на строку ниже
-      x = BOARD_LEFT_COORD
-      y += CELL_SIZE
+    # Смещает итерацию на строку ниже
+    x = BOARD_LEFT_COORD
+    y += CELL_SIZE
 
-else:
-  # Код фигуры
-  piece_code = 0
-  # Строки
-  for row in range(8):
-      # Колонки
-      for col in range(8):
-          # Перебераем строки с фигурами
-          if row in [1, 6]:
-              # Пропускает клетки с пешками
-              if row == 1 and col > 1: continue
-              if row == 6 and col > 1: continue
-              # Получает изображение фигуры
-              piece_image = screenshot[y:y + CELL_SIZE, x: x + CELL_SIZE]
-
-              #bg_color = piece_image[0:3, 0:3]
-              # cv2.imshow("x", bg_color)
-              # cv2.waitKey(0)
-
-              # cv2.imshow('scr', piece_image)
-              # cv2.waitKey(0)
-
-              #piece_image = remove_color_from_image(bg_color, piece_image)
-              # cv2.imshow('scr', x)
-              # cv2.waitKey(0)
-              # exit()
-                    
-              # Сохраняет изображения
-              #piece_image = cv2.cvtColor(piece_image, cv2.COLOR_BGR2GRAY)
-              cv2.imwrite('./images/figures/' + piece_names[str(piece_code)] + '.png', piece_image)
-                    
-              # Обновляет код фигуры
-              piece_code += 1
-            
-          # Смещает итерацию на следующую клетку
-          x += CELL_SIZE
-        
-      # Смещает итерацию на строку ниже
-      x = BOARD_LEFT_COORD
-      y += CELL_SIZE
-
+if side_to_move == 0:
+  subprocess.run(['python3', 'calibration_move.py', 'w'])
+else: 
+  subprocess.run(['python3', 'calibration_move.py', 'b'])
 
 cv2.destroyAllWindows()
 
