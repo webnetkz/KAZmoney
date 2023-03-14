@@ -1,6 +1,7 @@
 import numpy as np
 import pyautogui as pg
 import time
+import subprocess
 
 # Получение стартовой позиции и ширины шахматной доски
 from find_board import get_start_position
@@ -93,5 +94,7 @@ def go_move():
   pg.moveTo(to_sq)
   pg.click()
   time.sleep(3)
+  subprocess.run(['python3', 'find_king_queen.py'])
+
 
 go_move()

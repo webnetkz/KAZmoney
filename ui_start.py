@@ -55,6 +55,7 @@ class MatrixChess(MDApp):
           # Перебераем все квадраты
           subprocess.run(['python3', 'find_figures.py', 's'])
           self.start_text.text = "Last step"
+          subprocess.run(['python3', 'calibration_move.py'])
 
 
 
