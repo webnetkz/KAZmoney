@@ -1,7 +1,6 @@
 import tkinter as tk
 import os
 
-
 def draw_shape(x1, y1, x2, y2, w):
     root = tk.Tk()
 
@@ -46,6 +45,26 @@ def draw_shape(x1, y1, x2, y2, w):
 
     reset_button = tk.Button(root, text="Reset", command=reset, bg="red", fg="white", font=("Arial", 24, "bold"))
     reset_button.place(x=root.winfo_screenwidth() - reset_button.winfo_reqwidth(), y=0)
+
+    root.mainloop()
+
+
+def draw_rect(x1, y1, w):
+    root = tk.Tk()
+    root.wait_visibility(root)
+    root.wm_attributes("-fullscreen", 1)
+    root.wm_attributes("-transparentcolor", root['bg'])
+
+    frame = tk.Frame(root)
+    frame.pack()
+
+    canvas = tk.Canvas(frame, width=root.winfo_width(), height=root.winfo_height())
+    canvas.pack()
+
+    rect = canvas.create_rectangle(x1-3, y1-3, x1 + 3 + w, y1 + 3 + w, outline="red", width=2)
+    
+    # Закрываем окно через 2 секунды
+    root.after(500, root.destroy)
 
     root.mainloop()
 

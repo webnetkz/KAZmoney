@@ -5,6 +5,7 @@ import pyautogui as pg
 import numpy as np
 import sys
 from find_board import get_start_position
+from draw import draw_rect
 
 position_board = get_start_position()
 position_of_figures = 0
@@ -93,7 +94,7 @@ if position_of_figures == 1:
               if row == 6 and col > 1: continue
               # Получает изображение фигуры
               piece_image = screenshot[y:y + CELL_SIZE, x: x + CELL_SIZE]
-
+              draw_rect(x,y,CELL_SIZE)
               #bg_color = piece_image[0:3, 0:3]
               # cv2.imshow("x", bg_color)
               # cv2.waitKey(0)

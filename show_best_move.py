@@ -15,15 +15,16 @@ import threading
 from draw import draw_shape
 
 # Получение стартовой позиции и ширины шахматной доски
-from find_board import get_start_position
-position_board = get_start_position()
+#from find_board import get_start_position
+#position_board = get_start_position()
 
 # Константы для работы бота
-BOARD_SIZE = position_board[2]-4
+BOARD_SIZE = 833#position_board[2]-4
 DARK_SQUARE_THRESHOLD = 160
 CELL_SIZE = int(BOARD_SIZE / 8)
-BOARD_TOP_COORD = position_board[1]+4
-BOARD_LEFT_COORD = position_board[0]+3
+BOARD_TOP_COORD = 172#position_board[1]+4
+BOARD_LEFT_COORD = 519#position_board[0]+3
+
 
 CONFIDENCE = 0.99 # Уверенность определения фигуры
 DETECTION_NOICE_THRESHOLD = 8 
@@ -104,7 +105,6 @@ def search_piece(piece, piece_locations):
 
         # Сохраняем положение фигуры
         piece_locations[piece].append(location)
-        print('detecting:', piece, location)
       
     return True
 
@@ -210,26 +210,7 @@ def fen(piece_locations):
             
 # Находит лучший ход
 def search(fen):
-    print(fen)
-
     board = chess.Board(fen=fen)
-    xBoard = str(board)
-    #print(board)
-    xBoard = xBoard.replace("P", "♙")
-    xBoard = xBoard.replace("p", "♟")
-    xBoard = xBoard.replace("R", "♖")
-    xBoard = xBoard.replace("r", "♜")
-    xBoard = xBoard.replace("B", "♗")
-    xBoard = xBoard.replace("b", "♝")
-    xBoard = xBoard.replace("N", "♘")
-    xBoard = xBoard.replace("n", "♞")
-    xBoard = xBoard.replace("K", "♔")
-    xBoard = xBoard.replace("k", "♚")
-    xBoard = xBoard.replace("Q", "♕")
-    xBoard = xBoard.replace("q", "♛")
-
-    print(xBoard)
-
 
     # Зпускаием Stockfish engine
     engine = chess.engine.SimpleEngine.popen_uci("./chess_engines/Stockfish/stockfish.exe")
@@ -273,7 +254,6 @@ try:
     fen = fen(piece_locations)
 
     best_move = search(fen)
-    print('Возможно... это лучший ход:', best_move)
 
     # Получает позицию квадратов для хода
     from_sq = square_to_coords[get_square.index(best_move[0] + best_move[1])]

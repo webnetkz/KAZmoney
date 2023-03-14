@@ -31,6 +31,7 @@ def get_start_position():
 
     cv2.imwrite("./images/no_bg_board.png", matrix_img)
     result_position_chess_board = find_chessboard_contour(matrix_img)
+
     return result_position_chess_board
 
 # Возвращает x, y, w, h всей доски
