@@ -35,14 +35,14 @@ except:
 if side_to_move == 0:
   piece_names = {
     # b = black, w = white
-    '0': 'b_king_b',
-    '1': 'b_queen_w',
+    '0': 'w_queen_b',
+    '1': 'w_king_w',
   }
 else:
   piece_names = {
     # b = black, w = white
-    '0': 'w_king_b',
-    '1': 'w_queen_w',
+    '0': 'b_queen_w',
+    '1': 'b_king_b',
   }
 
 # Получает изображение и обрабатывает его
