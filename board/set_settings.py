@@ -11,8 +11,7 @@ def set_settings(con):
           CREATE TABLE IF NOT EXISTS board (
               id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
               name TEXT,
-              position INTEGER,
-              cell_size INTEGER
+              result INTEGER
           );
       """)
 
@@ -35,7 +34,7 @@ def set_board_position(con):
     BOARD_TOP_COORD = position_board[1]+4
     BOARD_LEFT_COORD = position_board[0]+3
 
-    sql = 'INSERT INTO board (name, position) values(?, ?)'
+    sql = 'INSERT INTO board (name, result) values(?, ?)'
     data = [
         ('x', BOARD_LEFT_COORD),
         ('y', BOARD_TOP_COORD),
