@@ -3,7 +3,7 @@
 import cv2
 import pyautogui as pg
 import numpy as np
-from find_board import get_start_position
+from board.find_board import get_start_position
 from draw import draw_rect
 import subprocess
 import sys
@@ -92,10 +92,10 @@ for row in range(8):
     x = BOARD_LEFT_COORD
     y += CELL_SIZE
 
-if side_to_move == 0:
-  subprocess.run(['python3', 'calibration_move.py', 'w'])
-else: 
-  subprocess.run(['python3', 'calibration_move.py', 'b'])
+# if side_to_move == 0:
+#   subprocess.run(['python3', 'calibration_move.py', 'w'])
+# else: 
+#   subprocess.run(['python3', 'calibration_move.py', 'b'])
 
 cv2.destroyAllWindows()
 

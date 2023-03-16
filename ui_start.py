@@ -39,7 +39,7 @@ class MatrixChess(MDApp):
         instance.text="Loading..."
 
         # Получение стартовой позиции и ширины шахматной доски
-        from find_board import get_start_position
+        from board.find_board import get_start_position
         position_board = get_start_position()
 
         if position_board == None:

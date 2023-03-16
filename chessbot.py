@@ -13,7 +13,7 @@ import chess.engine
 import time
 
 # Получение стартовой позиции и ширины шахматной доски
-from find_board import get_start_position
+from board.find_board import get_start_position
 position_board = get_start_position()
 
 # Константы для работы бота
@@ -261,6 +261,7 @@ while True:
         # Получает позицию квадратов для хода
         from_sq = square_to_coords[get_square.index(best_move[0] + best_move[1])]
         to_sq = square_to_coords[get_square.index(best_move[2] + best_move[3])]
+
 
         # Совершает ход
         pg.moveTo(from_sq)

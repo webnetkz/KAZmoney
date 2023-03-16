@@ -6,7 +6,7 @@ import numpy as np
 from draw import draw_rect
 import sys
 
-from find_board import get_start_position
+from board.find_board import get_start_position
 position_board = get_start_position()
 position_of_figures = 0
 

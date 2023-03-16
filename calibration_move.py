@@ -5,7 +5,7 @@ import subprocess
 import sys
 
 # Получение стартовой позиции и ширины шахматной доски
-from find_board import get_start_position
+from board.find_board import get_start_position
 position_board = get_start_position()
 
 

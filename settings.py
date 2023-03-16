@@ -1,4 +1,6 @@
 import sqlite3 as sl
+from board.find_board import get_start_position
+
 
 con = sl.connect("chess.db")
 
@@ -15,17 +17,36 @@ def set_settings(con):
       """)
 
 # Получает и записывает позицию шахматной доски
-def get_board_position(con):
-  sql = 'INSERT INTO board (name, position) values(?, ?)'
-  data = [
-      ('x', 150),
-      ('y', 210),
-      ('board', 800),
-  ]
+def set_board_position(con):
+  # Получает координаты
+  position_board = get_start_position()
+  # Доска не обнаружена
+  if not position_board:
+     print("Шахматная доска не найдена")
+     exit()
+  
+  # Проверяем наличие данных
+  data = con.execute("SELECT * FROM board")
+  rows = data.fetchall()
+  if not rows:
+    # Формируем\Добавляем данные в БД
+    BOARD_SIZE = position_board[2]-4
+    CELL_SIZE = int(BOARD_SIZE / 8)
+    BOARD_TOP_COORD = position_board[1]+4
+    BOARD_LEFT_COORD = position_board[0]+3
 
-  with con:
-      con.executemany(sql, data)
+    sql = 'INSERT INTO board (name, position) values(?, ?)'
+    data = [
+        ('x', BOARD_LEFT_COORD),
+        ('y', BOARD_TOP_COORD),
+        ('board', BOARD_SIZE),
+        ('cell_size', CELL_SIZE),
+    ]
+
+    with con:
+        con.executemany(sql, data)
 
 set_settings(con)
+set_board_position(con)
 
 
