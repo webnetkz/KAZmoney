@@ -23,6 +23,7 @@ CELL_SIZE = int(BOARD_SIZE / 8)
 BOARD_TOP_COORD = position_board[1]+4
 BOARD_LEFT_COORD = position_board[0]+3
 
+
 CONFIDENCE = 0.99 # Уверенность определения фигуры
 DETECTION_NOICE_THRESHOLD = 8 
 PIECES_PATH = './images/figures/'
@@ -252,6 +253,8 @@ while True:
     try:
         # Определяет положение фигур
         screenshot, piece_locations = recognize_position()
+        print(piece_locations)
+        exit()
 
         fen = locations_to_fen(piece_locations)
 
@@ -270,7 +273,7 @@ while True:
         pg.click()
         print(from_sq)
         pg.moveTo(500, 100)
-        time.sleep(3)
+        time.sleep(5)
     
     except: sys.exit(0)
 
