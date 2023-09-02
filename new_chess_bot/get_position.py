@@ -25,16 +25,13 @@ def get_position(url):
             column = int(left_percent / 12.5)
             cell_name = chr(97 + column) + str(row)  # Преобразуем в формат "a1", "b2" и т.д.
 
-            # Определяем цвет фигуры
             if piece_color == 'white':
                 color = 'white'
             else:
                 color = 'black'
             
-            # Записываем в словарь с указанием как цвет, так и класс фигуры
             piece_positions[cell_name] = f"{color} {piece_class}"
 
-        # Выводим словарь с позициями фигур
         # for cell, piece_class in piece_positions.items():
         #     print(f'{cell} = {piece_class}')
 
