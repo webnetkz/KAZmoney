@@ -1,9 +1,5 @@
-import sys
-import numpy as np
 import requests
 from bs4 import BeautifulSoup
-
-url = 'https://lichess.org/x6Y9nRig'
 
 def get_position(url):
     response = requests.get(url)
@@ -46,6 +42,3 @@ def get_position(url):
 
     else:
         print(f'Ошибка при запросе: {response.status_code}')
-
-
-print(get_position(url))
