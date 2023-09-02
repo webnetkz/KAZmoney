@@ -3,7 +3,7 @@
  <class>SecureWindow</class>
  <widget class="QMainWindow" name="SecureWindow">
   <property name="enabled">
-   <bool>false</bool>
+   <bool>true</bool>
   </property>
   <property name="geometry">
    <rect>
@@ -16,10 +16,15 @@
   <property name="windowTitle">
    <string>Enter a code</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: transparent;</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-        stop: 0 #3498db, stop: 0.5 #2980b9, stop: 1.0 #1f618d);</string>
+    <string notr="true"/>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -35,6 +40,9 @@
         <width>1</width>
         <height>50</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -56,7 +64,7 @@
         <item>
          <widget class="QLineEdit" name="CodeInput">
           <property name="enabled">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: #fff;
@@ -87,6 +95,9 @@
               <height>50</height>
              </size>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton {
     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
@@ -100,8 +111,7 @@
 }
 
 QPushButton:hover {
-    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-        stop: 0 #c0392b, stop: 0.5 #e74c3c, stop: 1.0 #922b21);
+    background: #fff;
     color: #000;
 	cursor: pointer;
 }</string>

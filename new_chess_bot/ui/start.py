@@ -7,6 +7,11 @@ class MyMainWindow(QMainWindow):
         super().__init__()
         self.ui = Ui_SecureWindow()
         self.ui.setupUi(self)
+        self.ui.NextButton.clicked.connect(self.print_input_value)
+
+    def print_input_value(self):
+        input_value = self.ui.CodeInput.text()
+        print(f"Input Value: {input_value}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

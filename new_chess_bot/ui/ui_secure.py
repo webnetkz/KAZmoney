@@ -23,12 +23,13 @@ class Ui_SecureWindow(object):
     def setupUi(self, SecureWindow):
         if not SecureWindow.objectName():
             SecureWindow.setObjectName(u"SecureWindow")
-        SecureWindow.setEnabled(False)
+        SecureWindow.setEnabled(True)
         SecureWindow.resize(618, 141)
+        SecureWindow.setStyleSheet(u"background-color: transparent;")
+        SecureWindow.setToolButtonStyle(Qt.ToolButtonIconOnly)
         self.centralwidget = QWidget(SecureWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.centralwidget.setStyleSheet(u"background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"        stop: 0 #3498db, stop: 0.5 #2980b9, stop: 1.0 #1f618d);")
+        self.centralwidget.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.splitter = QSplitter(self.centralwidget)
@@ -39,6 +40,7 @@ class Ui_SecureWindow(object):
         sizePolicy.setHeightForWidth(self.splitter.sizePolicy().hasHeightForWidth())
         self.splitter.setSizePolicy(sizePolicy)
         self.splitter.setBaseSize(QSize(1, 50))
+        self.splitter.setStyleSheet(u"")
         self.splitter.setOrientation(Qt.Vertical)
         self.verticalLayoutWidget = QWidget(self.splitter)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
@@ -50,7 +52,7 @@ class Ui_SecureWindow(object):
         self.Layout.setContentsMargins(0, 0, 0, 0)
         self.CodeInput = QLineEdit(self.verticalLayoutWidget)
         self.CodeInput.setObjectName(u"CodeInput")
-        self.CodeInput.setEnabled(False)
+        self.CodeInput.setEnabled(True)
         self.CodeInput.setStyleSheet(u"background-color: #fff;\n"
 "    color: #000;\n"
 "    border-radius: 7px;\n"
@@ -70,6 +72,7 @@ class Ui_SecureWindow(object):
         sizePolicy1.setHeightForWidth(self.NextButton.sizePolicy().hasHeightForWidth())
         self.NextButton.setSizePolicy(sizePolicy1)
         self.NextButton.setBaseSize(QSize(1, 50))
+        self.NextButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.NextButton.setStyleSheet(u"QPushButton {\n"
 "    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
 "        stop: 0 #e74c3c, stop: 0.5 #c0392b, stop: 1.0 #922b21);\n"
@@ -82,8 +85,7 @@ class Ui_SecureWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"        stop: 0 #c0392b, stop: 0.5 #e74c3c, stop: 1.0 #922b21);\n"
+"    background: #fff;\n"
 "    color: #000;\n"
 "	cursor: pointer;\n"
 "}")
