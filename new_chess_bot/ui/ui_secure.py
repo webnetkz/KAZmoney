@@ -25,7 +25,9 @@ class Ui_SecureWindow(object):
             SecureWindow.setObjectName(u"SecureWindow")
         SecureWindow.setEnabled(True)
         SecureWindow.resize(618, 141)
-        SecureWindow.setStyleSheet(u"background-color: transparent;")
+        SecureWindow.setStyleSheet(u"background: rgba(0, 0, 0, 0);\n"
+"filter: blur(12px);\n"
+"")
         SecureWindow.setToolButtonStyle(Qt.ToolButtonIconOnly)
         self.centralwidget = QWidget(SecureWindow)
         self.centralwidget.setObjectName(u"centralwidget")
