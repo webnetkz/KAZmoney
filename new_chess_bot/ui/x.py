@@ -1,7 +1,9 @@
-from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout, QPushButton
+from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout, QPushButton, QLineEdit
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPainter, QPen, QColor
+from PyQt5.QtGui import QPainter, QBrush, QColor, QFont
 
+from components.button import createButton
+from components.input import createInput
 
 class Widget(QWidget):
     def __init__(self):
@@ -11,11 +13,15 @@ class Widget(QWidget):
         self.setAttribute(Qt.WA_TranslucentBackground)
 
         self.old_pos = None
-        self.frame_color = Qt.darkCyan
 
         layout = QVBoxLayout()
+        
+        
+        layout.addWidget(createInput(self, 'Code'))
+        layout.addWidget(createButton(self, 'Check'))
+        layout.addWidget(createButton(self, 'ЗАКРЫТЬ'))
+
         layout.addStretch()
-        layout.addWidget(QPushButton("Закрыть окно", clicked=self.close))
 
         self.setLayout(layout)
 
@@ -36,18 +42,20 @@ class Widget(QWidget):
 
     def paintEvent(self, event):
         painter = QPainter(self)
+        painter.setRenderHint(QPainter.Antialiasing)
 
-        painter.setBrush(QColor(0, 0, 0, 200))
-        painter.setPen(QPen(self.frame_color, 10))
-
-        painter.drawRect(self.rect())
-
+        rect = self.rect()
+        radius = 12
+        background_color = QColor(0, 0, 0, 200)
+        painter.setBrush(QBrush(background_color))
+        painter.setPen(Qt.NoPen)
+        painter.drawRoundedRect(rect, radius, radius)
 
 if __name__ == '__main__':
     app = QApplication([])
 
     w = Widget()
-    w.resize(400, 300)
+    w.resize(400, 200)
     w.show()
 
     app.exec()
