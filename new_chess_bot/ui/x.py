@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout, QPushButton, QLineEdit
+from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPainter, QBrush, QColor, QFont
+from PyQt5.QtGui import QPainter, QBrush, QColor, QFont, QIcon
 
 from components.button import createButton
 from components.input import createInput
@@ -17,9 +17,9 @@ class Widget(QWidget):
         layout = QVBoxLayout()
         
         
-        layout.addWidget(createInput(self, 'Code'))
+        layout.addWidget(createInput(self, 'Enter code...'))
         layout.addWidget(createButton(self, 'Check'))
-        layout.addWidget(createButton(self, 'ЗАКРЫТЬ'))
+        layout.addWidget(createButton(self, 'Close'))
 
         layout.addStretch()
 
@@ -53,6 +53,8 @@ class Widget(QWidget):
 
 if __name__ == '__main__':
     app = QApplication([])
+
+    app.setWindowIcon(QIcon("../public/logo.png"))
 
     w = Widget()
     w.resize(400, 200)

@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QPushButton
 from PyQt5.QtCore import Qt
 
 def createButton(self, text='text'):
+    text = text.upper()
     self.steam_button = QPushButton(text, self)
     self.steam_button.clicked.connect(self.close)
     
