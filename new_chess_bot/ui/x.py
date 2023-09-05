@@ -54,7 +54,7 @@ class Widget(QWidget):
 if __name__ == '__main__':
     app = QApplication([])
 
-    app.setWindowIcon(QIcon("../public/logo.png"))
+    app.setWindowIcon(QIcon("./public/logo.png"))
 
     w = Widget()
     w.resize(400, 200)
