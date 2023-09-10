@@ -5,6 +5,7 @@ from PyQt5.QtGui import QPainter, QBrush, QColor, QFont, QIcon
 from components.button import createButton
 from components.input import createInput
 
+
 class Widget(QWidget):
     def __init__(self):
         super().__init__()
@@ -19,7 +20,6 @@ class Widget(QWidget):
         
         layout.addWidget(createInput(self, 'Enter code...'))
         layout.addWidget(createButton(self, 'Check'))
-        layout.addWidget(createButton(self, 'Close'))
 
         layout.addStretch()
 
@@ -54,7 +54,7 @@ class Widget(QWidget):
 if __name__ == '__main__':
     app = QApplication([])
 
-    app.setWindowIcon(QIcon("./public/logo.png"))
+    app.setWindowIcon(QIcon("./logo.png"))
 
     w = Widget()
     w.resize(400, 200)
