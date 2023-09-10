@@ -18,3 +18,4 @@ def print_board(fen):
     xBoard = xBoard.replace("q", "♛")
 
     print(xBoard)
+    return xBoard

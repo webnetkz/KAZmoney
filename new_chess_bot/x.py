@@ -2,8 +2,10 @@ from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPainter, QBrush, QColor, QFont, QIcon
 
-from components.button import createButton
-from components.input import createInput
+from ui.components.button import createButton
+from ui.components.input import createInput
+from ui.components.board import createChessboardConsole
+from test import x
 
 
 class Widget(QWidget):
@@ -16,10 +18,10 @@ class Widget(QWidget):
         self.old_pos = None
 
         layout = QVBoxLayout()
-        
-        
+                
         layout.addWidget(createInput(self, 'Enter code...'))
         layout.addWidget(createButton(self, 'Check'))
+        layout.addWidget(createChessboardConsole(self, x()))
 
         layout.addStretch()
 
