@@ -4,8 +4,5 @@ from print_board import print_board
 from search_best_move import search_best_move
 
 fen = get_fen(get_position('https://lichess.org/uyic0uK9r1PT'))
-#print(search_best_move(fen))
+print(search_best_move(fen))
 
-
-def x():
-    return print_board(fen)

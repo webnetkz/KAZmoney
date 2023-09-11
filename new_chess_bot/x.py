@@ -4,8 +4,6 @@ from PyQt5.QtGui import QPainter, QBrush, QColor, QFont, QIcon
 
 from ui.components.button import createButton
 from ui.components.input import createInput
-from ui.components.board import createChessboardConsole
-from test import x
 
 
 class Widget(QWidget):
@@ -21,7 +19,6 @@ class Widget(QWidget):
                 
         layout.addWidget(createInput(self, 'Enter code...'))
         layout.addWidget(createButton(self, 'Check'))
-        layout.addWidget(createChessboardConsole(self, x()))
 
         layout.addStretch()
 
@@ -59,7 +56,7 @@ if __name__ == '__main__':
     app.setWindowIcon(QIcon("./logo.png"))
 
     w = Widget()
-    w.resize(400, 200)
+    w.resize(400, 100)
     w.show()
 
     app.exec()
