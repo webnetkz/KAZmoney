@@ -13,8 +13,8 @@ def createClose(self):
             border: none;
             padding: 7px;
             border-radius: 7px;
-            font-size: 20px;
-            line-heihgt: 20px;
+            font-size: 15px;
+            line-heihgt: 10px;
             max-width: 20px;
             width: 20px;
         }

@@ -1,10 +1,10 @@
 from PyQt5.QtWidgets import QPushButton
 from PyQt5.QtCore import Qt
 
-def createButton(self, text='text'):
+def createButton(self, text='text', f=print):
     text = text.upper()
     self.steam_button = QPushButton(text, self)
-    self.steam_button.clicked.connect(self.close)
+    self.steam_button.clicked.connect(f)
     
     # Добавляем hover-эффект
     self.steam_button.setCursor(Qt.PointingHandCursor)

@@ -14,6 +14,10 @@ class StartWindowUI(QWidget):
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
+
+        def checkCode():
+            print(1)
+
         self.old_pos = None
 
         layout = QVBoxLayout()
@@ -22,7 +26,7 @@ class StartWindowUI(QWidget):
 
         layout.addLayout(header)
         layout.addWidget(createInput(self, 'Enter code...'))
-        layout.addWidget(createButton(self, 'Check'))
+        layout.addWidget(createButton(self, 'Check', checkCode))
 
         layout.addStretch()
 
