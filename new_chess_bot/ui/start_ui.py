@@ -1,9 +1,10 @@
-from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout
+from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout, QHBoxLayout
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPainter, QBrush, QColor, QFont, QIcon
 
 from components.button import createButton
 from components.input import createInput
+from components.header import createHeader
 
 
 class StartWindowUI(QWidget):
@@ -16,7 +17,10 @@ class StartWindowUI(QWidget):
         self.old_pos = None
 
         layout = QVBoxLayout()
-                
+        
+        header = createHeader(self)
+
+        layout.addLayout(header)
         layout.addWidget(createInput(self, 'Enter code...'))
         layout.addWidget(createButton(self, 'Check'))
 
@@ -60,3 +64,4 @@ if __name__ == '__main__':
     w.show()
 
     app.exec()
+
