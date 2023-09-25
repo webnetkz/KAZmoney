@@ -8,4 +8,4 @@ def first_start(url):
         response_json = response.text
         print(response_json)
 
-first_start('https://xchess.webnet.kz/check-code?code=thisIsCode')
+first_start('https://xchess.webnet.kz/check-code/?code=thisIsCode')
